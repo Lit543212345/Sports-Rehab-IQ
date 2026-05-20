@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Sports-Rehab-IQ/',
   plugins: [
     react(),
     VitePWA({
@@ -14,7 +15,7 @@ export default defineConfig({
         name: 'Sports Rehab IQ - Sports Injury Guide',
         short_name: 'Sports Rehab IQ',
         description: 'Evidence-based sports injury self-diagnosis and treatment tracking. Works offline.',
-        start_url: '/',
+        start_url: '/Sports-Rehab-IQ/',
         display: 'standalone',
         background_color: '#0a1628',
         theme_color: '#00d4aa',

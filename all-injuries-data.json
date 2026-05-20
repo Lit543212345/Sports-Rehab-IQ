@@ -1,0 +1,504 @@
+{
+  "lower-leg-ankle-foot": [
+    {
+      "id": "lateral-ankle-sprain",
+      "rootId": "las-q1",
+      "name": "Lateral Ankle Ligament Sprain",
+      "overview": "Injury to the lateral ankle ligaments (most commonly the ATFL) caused by excessive inversion and plantarflexion. Graded I-III based on severity. Most common sports injury overall."
+    },
+    {
+      "id": "plantar-fasciitis",
+      "rootId": "pf-q1",
+      "name": "Plantar Fasciitis / Plantar Heel Pain",
+      "overview": "Degenerative condition of the plantar fascia insertion at the medial calcaneal tubercle. Characterized by sharp heel pain with first steps in the morning that improves with activity but worsens after prolonged standing."
+    },
+    {
+      "id": "medial-tibial-stress-syndrome",
+      "rootId": "mtss-q1",
+      "name": "Medial Tibial Stress Syndrome (MTSS)",
+      "overview": "Exercise-induced pain along the posteromedial border of the tibia, caused by overload of the tibial periosteum. Common in runners and military recruits."
+    },
+    {
+      "id": "achilles-tendinopathy",
+      "rootId": "at-q1",
+      "name": "Achilles Tendinopathy",
+      "overview": "Overuse condition of the Achilles tendon, either at the midportion (2-6cm above insertion) or insertional (at the calcaneus). Characterized by morning stiffness and load-related pain."
+    },
+    {
+      "id": "calf-strain",
+      "rootId": "cs-q1",
+      "name": "Calf Muscle Strain",
+      "overview": "Acute strain of the gastrocnemius (most common) or soleus muscle. \"Tennis leg\" refers to the medial gastrocnemius musculotendinous junction injury. Sudden onset calf pain with push-off."
+    },
+    {
+      "id": "stress-fracture-foot",
+      "rootId": "sffoot-q1",
+      "name": "Metatarsal Stress Fracture",
+      "overview": "Bone stress injury of the metatarsals (2nd and 3rd most common) from repetitive loading. Gradual onset of forefoot pain that worsens with activity and improves with rest."
+    },
+    {
+      "id": "peroneal-tendinopathy",
+      "rootId": "pt-q1",
+      "name": "Peroneal Tendinopathy",
+      "overview": "Overuse condition of the peroneal tendons (peroneus longus and brevis) running behind the lateral malleolus. Causes lateral ankle pain, especially with eversion and push-off activities."
+    },
+    {
+      "id": "ankle-impingement",
+      "rootId": "ai-q1",
+      "name": "Ankle Impingement Syndrome",
+      "overview": "Soft tissue or bony impingement at the ankle causing pain at end-range dorsiflexion (anterior) or plantarflexion (posterior). Common in footballers and dancers respectively."
+    },
+    {
+      "id": "exertional-compartment",
+      "rootId": "cecs-q1",
+      "name": "Chronic Exertional Compartment Syndrome (CECS)",
+      "overview": "Increased pressure within a closed muscle compartment during exercise, causing pain that starts at a predictable point during activity and resolves with rest. Most common in the anterior compartment of the lower leg."
+    },
+    {
+      "id": "chronic-ankle-instability",
+      "rootId": "cai-q1",
+      "name": "Chronic Ankle Instability (CAI)",
+      "overview": "Persistent feeling of ankle \"giving way\" or recurrent sprains occurring > 12 months after an initial ankle sprain. Affects up to 40% of people after a lateral ankle sprain. Due to mechanical laxity AND neuromuscular deficits."
+    },
+    {
+      "id": "achilles-rupture",
+      "rootId": "ar-q1",
+      "name": "Achilles Tendon Rupture",
+      "overview": "Complete tear of the Achilles tendon, typically occurring 2-6 cm above the calcaneal insertion. Classically felt as being \"kicked in the back of the leg.\" Most common in recreational athletes aged 30-50."
+    },
+    {
+      "id": "tibial-stress-fracture",
+      "rootId": "tsf-q1",
+      "name": "Tibial Stress Fracture",
+      "overview": "Bone stress injury of the tibia, the most common stress fracture in athletes. Presents as localized shin pain that worsens with weight-bearing activity. Important differential diagnosis for MTSS (shin splints)."
+    },
+    {
+      "id": "turf-toe",
+      "rootId": "tt-q1",
+      "name": "Turf Toe (1st MTP Sprain)",
+      "overview": "Sprain of the plantar plate and capsule of the first metatarsophalangeal (MTP) joint from forced dorsiflexion of the big toe. Named for its association with artificial turf. Can be debilitating if severe."
+    },
+    {
+      "id": "lisfranc-injury",
+      "rootId": "lisf-q1",
+      "name": "Lisfranc (Midfoot) Injury",
+      "overview": "Injury to the tarsometatarsal (Lisfranc) joint complex — often missed and misdiagnosed as a \"midfoot sprain.\" Ranges from subtle ligamentous injury to fracture-dislocation. Missed diagnosis leads to chronic midfoot arthritis."
+    },
+    {
+      "id": "severs-disease",
+      "rootId": "sev-q1",
+      "name": "Calcaneal Apophysitis (Sever's Disease)",
+      "overview": "Traction apophysitis of the calcaneal growth plate in active children (ages 8-14). The Achilles tendon and plantar fascia pull on the immature bone. The most common cause of heel pain in children."
+    },
+    {
+      "id": "posterior-ankle-impingement",
+      "rootId": "pai-q1",
+      "name": "Posterior Ankle Impingement",
+      "overview": "Compression of soft tissue or bone (os trigonum) at the posterior ankle during plantarflexion. Common in ballet dancers (relevé/pointe), footballers (kicking), and fast bowlers. Pain at the back of the ankle with forced pointing."
+    },
+    {
+      "id": "mortons-neuroma",
+      "rootId": "mn-q1",
+      "name": "Morton's Neuroma (Interdigital Neuroma)",
+      "overview": "Perineural fibrosis of the interdigital nerve, most commonly between the 3rd and 4th metatarsal heads. Causes burning pain, numbness, and the sensation of \"standing on a pebble\" in the forefoot."
+    }
+  ],
+  "knee-thigh": [
+    {
+      "id": "acl-injury",
+      "rootId": "acl-q1",
+      "name": "Anterior Cruciate Ligament (ACL) Injury",
+      "overview": "Partial or complete tear of the ACL, typically from non-contact pivoting, cutting, or landing mechanisms. Often accompanied by an audible \"pop\" and rapid knee swelling."
+    },
+    {
+      "id": "patellofemoral-pain",
+      "rootId": "pfps-q1",
+      "name": "Patellofemoral Pain Syndrome (PFPS)",
+      "overview": "Diffuse anterior knee pain around or behind the patella, aggravated by activities that load the patellofemoral joint such as squatting, stairs, running, and prolonged sitting."
+    },
+    {
+      "id": "hamstring-strain",
+      "rootId": "hsi-q1",
+      "name": "Hamstring Strain Injury (HSI)",
+      "overview": "Acute strain of the hamstring muscle group, most commonly the biceps femoris long head. Typically occurs during sprinting (late swing phase) or stretching movements."
+    },
+    {
+      "id": "meniscal-tear",
+      "rootId": "men-q1",
+      "name": "Meniscal Tear",
+      "overview": "Tear of the medial or lateral meniscus, either traumatic (twisting injury) or degenerative (age-related). Causes pain, swelling, catching, and locking of the knee."
+    },
+    {
+      "id": "itb-syndrome",
+      "rootId": "itb-q1",
+      "name": "Iliotibial Band Syndrome (ITBS)",
+      "overview": "Lateral knee pain caused by compression of the highly innervated fat pad deep to the ITB at the lateral femoral epicondyle. Most common in runners at ~30° of knee flexion."
+    },
+    {
+      "id": "patellar-tendinopathy",
+      "rootId": "ptend-q1",
+      "name": "Patellar Tendinopathy (Jumper's Knee)",
+      "overview": "Overuse tendinopathy of the patellar tendon at the inferior pole of the patella. Common in jumping sports. Characterized by localized anterior knee pain with loading."
+    },
+    {
+      "id": "quadriceps-strain",
+      "rootId": "qs-q1",
+      "name": "Quadriceps Strain / Contusion",
+      "overview": "Acute muscle strain or direct contusion to the quadriceps. Rectus femoris is the most commonly strained quad muscle. Contusions (\"dead leg\") are common in contact sports."
+    },
+    {
+      "id": "mcl-sprain",
+      "rootId": "mcl-q1",
+      "name": "Medial Collateral Ligament (MCL) Sprain",
+      "overview": "Sprain of the MCL from valgus (inward buckling) force to the knee. Graded I-III. Usually managed conservatively even with complete tears due to the MCL's good healing capacity."
+    },
+    {
+      "id": "knee-osteoarthritis",
+      "rootId": "koa-q1",
+      "name": "Knee Osteoarthritis",
+      "overview": "Degenerative joint disease of the knee with loss of articular cartilage, osteophyte formation, and joint inflammation. Exercise is the first-line treatment and is strongly recommended."
+    },
+    {
+      "id": "osgood-schlatter",
+      "rootId": "os-q1",
+      "name": "Osgood-Schlatter Disease",
+      "overview": "Traction apophysitis of the tibial tubercle occurring in active adolescents during growth spurts. The patellar tendon pulls on the immature bone causing pain, swelling, and a bony bump."
+    },
+    {
+      "id": "patellar-instability",
+      "rootId": "pi-q1",
+      "name": "Patellar Instability / Dislocation",
+      "overview": "Lateral displacement of the patella from the trochlear groove, either complete dislocation or subluxation. Causes sudden giving way, swelling, and anterior knee pain. Recurrence rate is high in young patients."
+    },
+    {
+      "id": "pcl-injury",
+      "rootId": "pcl-q1",
+      "name": "Posterior Cruciate Ligament (PCL) Injury",
+      "overview": "Injury to the posterior cruciate ligament, most commonly from a direct blow to the anterior tibia (e.g., dashboard in car crash, falling on bent knee in sport, or hyperflexion). Less common than ACL tears."
+    },
+    {
+      "id": "lcl-sprain",
+      "rootId": "lcl-q1",
+      "name": "Lateral Collateral Ligament (LCL) Sprain",
+      "overview": "Sprain of the lateral collateral ligament from a varus (inward) force to the knee. Less common than MCL injuries because the opposite leg typically protects from direct varus blows."
+    },
+    {
+      "id": "hoffas-fat-pad",
+      "rootId": "hfp-q1",
+      "name": "Hoffa's Fat Pad Impingement",
+      "overview": "Impingement and inflammation of the infrapatellar fat pad (Hoffa's fat pad). Causes anterior knee pain just below the kneecap that is often confused with patellar tendinopathy. Pain worsens with full knee extension."
+    },
+    {
+      "id": "pes-anserine",
+      "rootId": "pa-q1",
+      "name": "Pes Anserine Bursitis / Tendinopathy",
+      "overview": "Pain and tenderness over the pes anserine insertion on the anteromedial tibia, approximately 5cm below the joint line. Where the sartorius, gracilis, and semitendinosus tendons converge."
+    },
+    {
+      "id": "prepatellar-bursitis",
+      "rootId": "ppb-q1",
+      "name": "Prepatellar Bursitis (Housemaid's Knee)",
+      "overview": "Swelling of the bursa overlying the front of the kneecap (patella). Usually from direct trauma or repetitive kneeling. Distinct from intra-articular knee effusion (the swelling is superficial to the patella, not inside the joint)."
+    },
+    {
+      "id": "plica-syndrome",
+      "rootId": "plic-q1",
+      "name": "Plica Syndrome (Medial Plica Irritation)",
+      "overview": "Irritation of a thickened medial plica (synovial fold) in the knee, causing a snapping sensation and anteromedial knee pain. The plica catches between the patella and femoral condyle during flexion-extension."
+    }
+  ],
+  "head-neck": [
+    {
+      "id": "concussion",
+      "rootId": "conc-q1",
+      "name": "Sport-Related Concussion (SRC)",
+      "overview": "Traumatic brain injury induced by biomechanical forces, resulting in a complex pathophysiological process affecting the brain. Diagnosis is clinical — no single test confirms concussion."
+    },
+    {
+      "id": "whiplash",
+      "rootId": "wad-q1",
+      "name": "Whiplash-Associated Disorder (WAD)",
+      "overview": "Injury to the cervical spine caused by sudden acceleration-deceleration mechanism. Classified WAD I-IV by Quebec Task Force. Common in contact sports and motor vehicle collisions."
+    },
+    {
+      "id": "cervical-radiculopathy",
+      "rootId": "cr-q1",
+      "name": "Cervical Radiculopathy",
+      "overview": "Compression or irritation of a cervical nerve root causing pain, numbness, or weakness radiating into the arm. Common levels C5-C7."
+    },
+    {
+      "id": "stingers-burners",
+      "rootId": "sb-q1",
+      "name": "Stingers & Burners (Brachial Plexus Injury)",
+      "overview": "Transient brachial plexus neurapraxia caused by lateral flexion of the neck or depression of the shoulder, producing an electric shock or burning sensation down the arm. Extremely common in contact sports (football, rugby, wrestling)."
+    },
+    {
+      "id": "cervical-sprain",
+      "rootId": "csp-q1",
+      "name": "Cervical Sprain / Strain (Non-Disc)",
+      "overview": "Acute injury to the cervical spine muscles, ligaments, or facet joints from sudden force or poor positioning during sport. Distinguished from disc pathology and WAD by absence of neurological signs and typically rapid recovery."
+    }
+  ],
+  "shoulder": [
+    {
+      "id": "rotator-cuff-injury",
+      "rootId": "rc-q1",
+      "name": "Rotator Cuff Tendinopathy / Tear",
+      "overview": "Spectrum of rotator cuff pathology from tendinopathy to partial/full-thickness tears. Presents with shoulder pain during overhead activities, weakness, and painful arc of movement."
+    },
+    {
+      "id": "shoulder-instability",
+      "rootId": "si-q1",
+      "name": "Shoulder Instability / Dislocation",
+      "overview": "Excessive translation of the humeral head on the glenoid. May be traumatic (dislocation) or atraumatic (multidirectional instability). Anterior dislocations account for 95% of cases."
+    },
+    {
+      "id": "ac-joint-injury",
+      "rootId": "ac-q1",
+      "name": "Acromioclavicular (AC) Joint Injury",
+      "overview": "Injury to the acromioclavicular joint, graded I-VI (Rockwood). Typically caused by direct fall onto the point of the shoulder. Grades I-III usually managed conservatively."
+    },
+    {
+      "id": "frozen-shoulder",
+      "rootId": "fs-q1",
+      "name": "Adhesive Capsulitis (Frozen Shoulder)",
+      "overview": "Progressive restriction of active and passive shoulder ROM due to capsular fibrosis. Typically progresses through freezing, frozen, and thawing phases over 12-36 months."
+    },
+    {
+      "id": "slap-tear",
+      "rootId": "slap-q1",
+      "name": "Superior Labral (SLAP) Tear",
+      "overview": "Tear of the superior glenoid labrum extending from anterior to posterior, often involving the biceps anchor. Common in overhead athletes (baseball, swimming, tennis)."
+    },
+    {
+      "id": "swimmers-shoulder",
+      "rootId": "swsh-q1",
+      "name": "Swimmer's Shoulder (Supraspinatus Tendinopathy)",
+      "overview": "Overuse injury of the supraspinatus and rotator cuff tendons from repetitive overhead motion, particularly swimming. The subtype of rotator cuff tendinopathy most relevant to overhead athletes."
+    },
+    {
+      "id": "shoulder-bursitis",
+      "rootId": "sbur-q1",
+      "name": "Subacromial Bursitis",
+      "overview": "Inflammation of the subacromial bursa, often coexisting with rotator cuff tendinopathy. Produces a painful arc between 60-120° of arm elevation. May occur acutely (direct blow) or chronically (repetitive overhead use)."
+    },
+    {
+      "id": "biceps-tendinopathy",
+      "rootId": "bt-q1",
+      "name": "Biceps Tendinopathy / Tendinitis",
+      "overview": "Pain and tenderness over the long head of biceps tendon in the bicipital groove (front of shoulder). Common in overhead and throwing athletes. Often coexists with rotator cuff pathology."
+    },
+    {
+      "id": "scapular-dyskinesis",
+      "rootId": "sd-q1",
+      "name": "Scapular Dyskinesis–Related Overuse Pain",
+      "overview": "Altered scapular position and movement causing or contributing to shoulder pain. The scapula fails to retract, posteriorly tilt, or upwardly rotate properly during arm elevation, leading to secondary impingement or rotator cuff overload."
+    }
+  ],
+  "elbow-wrist-hand": [
+    {
+      "id": "tennis-elbow",
+      "rootId": "te-q1",
+      "name": "Lateral Epicondylalgia (Tennis Elbow)",
+      "overview": "Tendinopathy of the common extensor origin at the lateral epicondyle, primarily the extensor carpi radialis brevis (ECRB). Characterized by lateral elbow pain worsened by gripping and wrist extension."
+    },
+    {
+      "id": "golfers-elbow",
+      "rootId": "ge-q1",
+      "name": "Medial Epicondylalgia (Golfer's Elbow)",
+      "overview": "Tendinopathy of the common flexor-pronator origin at the medial epicondyle. Pain with gripping, wrist flexion, and pronation. Common in throwing sports and golf."
+    },
+    {
+      "id": "carpal-tunnel",
+      "rootId": "cts-q1",
+      "name": "Carpal Tunnel Syndrome (CTS)",
+      "overview": "Compression of the median nerve at the wrist causing numbness, tingling, and weakness in the thumb, index, middle, and radial half of ring finger."
+    },
+    {
+      "id": "de-quervain",
+      "rootId": "dq-q1",
+      "name": "De Quervain's Tenosynovitis",
+      "overview": "Stenosing tenosynovitis of the first dorsal compartment tendons (APL and EPB). Pain at the radial (thumb) side of the wrist, especially with gripping and thumb movements."
+    },
+    {
+      "id": "wrist-sprain",
+      "rootId": "ws-q1",
+      "name": "Wrist Sprain / Scaphoid Fracture",
+      "overview": "Ligamentous sprain or fracture of the wrist from a fall on outstretched hand (FOOSH). Scaphoid fractures are the most common carpal fracture and can be missed on initial X-ray."
+    },
+    {
+      "id": "trigger-finger",
+      "rootId": "tf-q1",
+      "name": "Trigger Finger (Stenosing Tenosynovitis)",
+      "overview": "Stenosing tenosynovitis of the flexor tendon sheath at the A1 pulley. Finger catches or locks in flexion, then releases with a painful snap."
+    },
+    {
+      "id": "olecranon-bursitis",
+      "rootId": "ob-q1",
+      "name": "Olecranon Bursitis",
+      "overview": "Swelling of the bursa overlying the olecranon (point of the elbow). Can be traumatic (direct blow, fall) or friction-related (repetitive leaning on elbows). Usually painless unless infected."
+    },
+    {
+      "id": "ucl-sprain",
+      "rootId": "ucl-q1",
+      "name": "Ulnar Collateral Ligament (UCL) Sprain",
+      "overview": "Sprain or tear of the ulnar collateral ligament of the elbow, most commonly from repetitive valgus stress during overhead throwing. The classic \"Tommy John\" injury in baseball pitchers."
+    },
+    {
+      "id": "capitellar-ocd",
+      "rootId": "cocd-q1",
+      "name": "Capitellar Osteochondritis Dissecans (OCD)",
+      "overview": "Osteochondral lesion of the capitellum (lateral elbow) from repetitive compressive and valgus forces during throwing or gymnastics. Most common in adolescents. Can progress to loose bodies if not managed."
+    },
+    {
+      "id": "skiers-thumb",
+      "rootId": "skt-q1",
+      "name": "Thumb UCL Injury (Skier's / Gamekeeper's Thumb)",
+      "overview": "Sprain or rupture of the ulnar collateral ligament of the thumb MCP joint. Acute injury (skier's thumb) from a forced abduction mechanism — typically falling on an outstretched hand with a ski pole. Stener lesion (interposed adductor aponeurosis) prevents healing of complete tears."
+    },
+    {
+      "id": "mallet-finger",
+      "rootId": "mf-q1",
+      "name": "Mallet Finger",
+      "overview": "Rupture of the terminal extensor tendon (or bony avulsion from the distal phalanx), causing inability to actively extend the DIP joint. Classic mechanism: ball striking the fingertip."
+    },
+    {
+      "id": "hand-fracture",
+      "rootId": "hf-q1",
+      "name": "Phalangeal / Metacarpal Fracture & PIP Dislocation",
+      "overview": "Fractures of the finger bones (phalanges) or hand bones (metacarpals), and dislocations of the PIP joint. Common in ball-handling and contact sports. 5th metacarpal neck fracture (\"boxer's fracture\") is the most common."
+    }
+  ],
+  "spine": [
+    {
+      "id": "lumbar-disc-herniation",
+      "rootId": "ldh-q1",
+      "name": "Lumbar Disc Herniation",
+      "overview": "Displacement of disc material beyond the normal margins of the intervertebral disc space. May cause radiculopathy (leg pain/numbness) if the herniation compresses a nerve root."
+    },
+    {
+      "id": "non-specific-lbp",
+      "rootId": "nslbp-q1",
+      "name": "Non-Specific Low Back Pain",
+      "overview": "Back pain without a specific identifiable pathoanatomical source. Accounts for 85-90% of all low back pain presentations. Multifactorial — biopsychosocial approach recommended."
+    },
+    {
+      "id": "spondylolysis",
+      "rootId": "spon-q1",
+      "name": "Lumbar Spondylolysis / Stress Fracture",
+      "overview": "Stress fracture of the pars interarticularis, most commonly at L5. Common in sports requiring repetitive lumbar extension and rotation (cricket, gymnastics, diving)."
+    },
+    {
+      "id": "thoracic-pain",
+      "rootId": "tp-q1",
+      "name": "Thoracic Spine Pain / Costochondritis",
+      "overview": "Pain arising from the thoracic spine, costovertebral joints, or costochondral junctions. Often postural in nature. Costochondritis is inflammation of the rib-cartilage junction."
+    },
+    {
+      "id": "lumbar-stenosis",
+      "rootId": "ls-q1",
+      "name": "Lumbar Spinal Stenosis",
+      "overview": "Narrowing of the lumbar spinal canal causing neurogenic claudication — leg pain/heaviness with walking that eases with sitting or leaning forward."
+    },
+    {
+      "id": "sij-pain",
+      "rootId": "sij-q1",
+      "name": "Sacroiliac Joint (SIJ) Pain",
+      "overview": "Pain arising from the sacroiliac joint, typically felt in the buttock/posterior pelvis and sometimes referring into the posterior thigh. Common in runners and athletes with asymmetric loading patterns."
+    },
+    {
+      "id": "rib-stress-injury",
+      "rootId": "rib-q1",
+      "name": "Rib Stress Injury / Stress Fracture",
+      "overview": "Stress fracture or stress reaction of a rib, most common in rowing (posterolateral ribs 4-8) and cricket fast bowling. Also seen in golf, tennis, and other sports with repetitive trunk rotation."
+    },
+    {
+      "id": "lumbar-muscle-strain",
+      "rootId": "lms-q1",
+      "name": "Symptomatic Lumbar Muscle Strain (Non-Disc)",
+      "overview": "Acute strain of the lumbar paraspinal muscles or thoracolumbar fascia, typically from sudden loading, lifting, or rotational force. Distinguished from disc pathology by absence of radiculopathy."
+    }
+  ],
+  "hip-pelvis-groin": [
+    {
+      "id": "groin-pain",
+      "rootId": "gp-q1",
+      "name": "Groin Pain Syndrome",
+      "overview": "Umbrella term for activity-related groin pain classified by the Doha agreement into adductor-related, iliopsoas-related, inguinal-related, and pubic-related groin pain."
+    },
+    {
+      "id": "fai-syndrome",
+      "rootId": "fai-q1",
+      "name": "Femoroacetabular Impingement (FAI)",
+      "overview": "Abnormal contact between the femoral head and acetabulum during hip motion due to bony morphology (cam, pincer, or mixed). Causes groin/hip pain with deep flexion, pivoting, and prolonged sitting."
+    },
+    {
+      "id": "hip-labral-tear",
+      "rootId": "hlt-q1",
+      "name": "Hip Labral Tear",
+      "overview": "Tear of the fibrocartilaginous labrum lining the acetabulum. Causes deep groin pain, clicking, catching, and giving way. Often associated with FAI."
+    },
+    {
+      "id": "hip-stress-fracture",
+      "rootId": "hsf-q1",
+      "name": "Femoral Neck Stress Fracture",
+      "overview": "Bone stress injury of the femoral neck caused by repetitive loading beyond bone remodeling capacity. A serious injury — compression side (inferior) is lower risk than tension side (superior)."
+    },
+    {
+      "id": "hip-osteoarthritis",
+      "rootId": "hoa-q1",
+      "name": "Hip Osteoarthritis",
+      "overview": "Degenerative joint disease of the hip. Presents with groin pain, reduced ROM (especially internal rotation), and stiffness. Exercise is the FIRST-LINE treatment — more effective than any medication."
+    },
+    {
+      "id": "gtps",
+      "rootId": "gtps-q1",
+      "name": "Greater Trochanteric Pain Syndrome (GTPS)",
+      "overview": "Lateral hip pain over the greater trochanter. Now understood as primarily a gluteal tendinopathy (not bursitis). Most common in middle-aged women and runners. Hallmark: pain lying on the affected side."
+    },
+    {
+      "id": "snapping-hip",
+      "rootId": "shp-q1",
+      "name": "Snapping Hip Syndrome",
+      "overview": "Audible or palpable snapping around the hip during movement. External type: ITB over greater trochanter. Internal type: iliopsoas tendon over iliopectineal eminence. Usually painless initially but can become symptomatic."
+    },
+    {
+      "id": "piriformis-syndrome",
+      "rootId": "pir-q1",
+      "name": "Piriformis Syndrome",
+      "overview": "Compression or irritation of the sciatic nerve by the piriformis muscle deep in the buttock. Causes buttock pain with possible sciatic-type symptoms. Diagnosis of exclusion — rule out lumbar disc pathology first."
+    },
+    {
+      "id": "apophyseal-avulsion",
+      "rootId": "aa-q1",
+      "name": "Apophyseal Avulsion Injury (Pelvis/Hip)",
+      "overview": "Avulsion of a pelvic apophysis at the muscle-bone junction in skeletally immature athletes. Sites: ASIS (sartorius), AIIS (rectus femoris), ischial tuberosity (hamstrings), iliac crest (abdominals). Occurs during explosive sprinting, kicking, or jumping."
+    },
+    {
+      "id": "hip-pointer",
+      "rootId": "hp-q1",
+      "name": "Hip Pointer (Iliac Crest Contusion)",
+      "overview": "Direct contusion to the iliac crest, typically from a fall, collision, or direct blow. Causes significant pain and bruising over the hip bone. Common in contact sports (football, rugby, hockey)."
+    }
+  ],
+  "systemic": [
+    {
+      "id": "exercise-muscle-cramps",
+      "rootId": "eamc-q1",
+      "name": "Exercise-Associated Muscle Cramps (EAMC)",
+      "overview": "Involuntary, painful, spasmodic contraction of skeletal muscle during or immediately after exercise. Multifactorial cause including neuromuscular fatigue, not simply dehydration."
+    },
+    {
+      "id": "overtraining-syndrome",
+      "rootId": "ots-q1",
+      "name": "Overtraining Syndrome (OTS)",
+      "overview": "A maladaptation to excessive exercise without adequate recovery, resulting in persistent underperformance (> 2 months), fatigue, mood disturbance, and neuroendocrine changes. Diagnosis of exclusion."
+    },
+    {
+      "id": "doms",
+      "rootId": "doms-q1",
+      "name": "Delayed Onset Muscle Soreness (DOMS)",
+      "overview": "Normal physiological response to unaccustomed or eccentric exercise, causing muscle pain and stiffness peaking 24-72 hours after activity. NOT an injury — a normal adaptive process."
+    }
+  ]
+}

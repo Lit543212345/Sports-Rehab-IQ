@@ -9,9 +9,21 @@ import { MedicalDisclaimer } from './components/shared/MedicalDisclaimer';
 import { Home } from './pages/Home';
 import './styles/global.css';
 
-const Diagnose = lazy(() => import('./pages/Diagnose').then(m => ({ default: m.Diagnose })));
-const Treatment = lazy(() => import('./pages/Treatment').then(m => ({ default: m.Treatment })));
-const History = lazy(() => import('./pages/History').then(m => ({ default: m.History })));
+const lazyWithRetry = (componentImport: () => Promise<any>) =>
+  lazy(async () => {
+    try {
+      return await componentImport();
+    } catch (error) {
+      if (String(error).includes('fetch dynamically imported module') || String(error).includes('ChunkLoadError')) {
+        window.location.reload();
+      }
+      throw error;
+    }
+  });
+
+const Diagnose = lazyWithRetry(() => import('./pages/Diagnose').then(m => ({ default: m.Diagnose })));
+const Treatment = lazyWithRetry(() => import('./pages/Treatment').then(m => ({ default: m.Treatment })));
+const History = lazyWithRetry(() => import('./pages/History').then(m => ({ default: m.History })));
 
 function AppContent() {
   const location = useLocation();

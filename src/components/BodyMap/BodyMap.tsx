@@ -40,7 +40,7 @@ const MUSCLE_TO_REGION: Record<string, BodyRegion> = {
   'right-soleus': 'lower-leg-ankle-foot'
 };
 
-const REGION_TO_MUSCLES: Record<string, string[]> = {
+export const REGION_TO_MUSCLES: Record<string, string[]> = {
   'head-neck': ['head', 'neck'],
   'shoulder': ['front-deltoids', 'back-deltoids'],
   'spine': ['chest', 'upper-back', 'lower-back', 'trapezius'],

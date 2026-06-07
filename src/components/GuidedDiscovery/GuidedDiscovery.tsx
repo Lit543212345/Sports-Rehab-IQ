@@ -11,6 +11,7 @@ import { getDiagnosticNode } from '../../data/knowledgebase';
 import { getStartNode, recordAnswer, resolveResult } from '../../engine/diagnostic-matcher';
 import type { KnowledgebaseQueryResult } from '../../data/knowledgebase/types';
 import { GlassCard } from '../shared/GlassCard';
+import { REGION_TO_MUSCLES } from '../BodyMap/BodyMap';
 import './GuidedDiscovery.css';
 
 interface GuidedDiscoveryProps {
@@ -124,17 +125,15 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                     transition={{ delay: i * 0.08 }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    {option.highlightMuscles && (
-                      <div className="guided-discovery__option-diagram">
-                        <Model
-                          type={option.modelType || 'anterior'}
-                          data={[{ name: 'Highlight', muscles: option.highlightMuscles as Muscle[] }]}
-                          bodyColor="var(--color-bg-secondary)"
-                          highlightedColors={['var(--color-accent)']}
-                          style={{ width: '40px', height: '80px' }}
-                        />
-                      </div>
-                    )}
+                    <div className="guided-discovery__option-diagram">
+                      <Model
+                        type={option.modelType || 'anterior'}
+                        data={[{ name: 'Highlight', muscles: (option.highlightMuscles || REGION_TO_MUSCLES[region] || []) as Muscle[] }]}
+                        bodyColor="var(--color-bg-secondary)"
+                        highlightedColors={['var(--color-accent)']}
+                        style={{ width: '40px', height: '80px' }}
+                      />
+                    </div>
                     <span className="guided-discovery__option-label">{option.label}</span>
                   </motion.button>
                 ))}

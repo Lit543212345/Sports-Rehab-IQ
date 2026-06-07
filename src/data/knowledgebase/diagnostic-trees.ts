@@ -31,10 +31,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'las-q3', type: 'question', category: 'location',
     content: 'Where is the main area of pain?',
     options: [
-      { label: 'Outside (lateral) ankle', nextNodeId: 'las-q4', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 92, left: 36 } },
-      { label: 'Inside (medial) ankle', nextNodeId: 'las-medial', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 92, left: 44 } },
-      { label: 'Front of ankle', nextNodeId: 'las-anterior', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 90, left: 40 } },
-      { label: 'Back of ankle / Achilles area', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 90, left: 40 } },
+      { label: 'Outside (lateral) ankle', nextNodeId: 'las-q4', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 46, left: 32 } },
+      { label: 'Inside (medial) ankle', nextNodeId: 'las-medial', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 44, left: 44 } },
+      { label: 'Front of ankle', nextNodeId: 'las-anterior', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 42, left: 38 } },
+      { label: 'Back of ankle / Achilles area', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 48, left: 30 } },
     ],
   },
   'las-q4': {
@@ -145,10 +145,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pfps-q2', type: 'question', category: 'location',
     content: 'Where exactly is your knee pain?',
     options: [
-      { label: 'Around or behind the kneecap', nextNodeId: 'pfps-q3', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 40 } },
-      { label: 'Below the kneecap (on the tendon)', nextNodeId: 'pfps-patellar-tend', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 74, left: 40 } },
-      { label: 'Outside of the knee', nextNodeId: 'pfps-itbs', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 35 } },
-      { label: 'Inside of the knee', nextNodeId: 'pfps-medial', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 45 } },
+      { label: 'Around or behind the kneecap', nextNodeId: 'pfps-q3', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 50, left: 50 } },
+      { label: 'Below the kneecap (on the tendon)', nextNodeId: 'pfps-patellar-tend', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 62, left: 50 } },
+      { label: 'Outside of the knee', nextNodeId: 'pfps-itbs', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 50, left: 38 } },
+      { label: 'Inside of the knee', nextNodeId: 'pfps-medial', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 50, left: 62 } },
     ],
   },
   'pfps-q3': {
@@ -203,10 +203,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pf-q2', type: 'question', category: 'location',
     content: 'Where exactly is the pain on your foot?',
     options: [
-      { label: 'Under the heel (plantar surface)', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 96, left: 40 } },
-      { label: 'Back of heel (Achilles area)', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 92, left: 40 } },
-      { label: 'Arch of the foot', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 94, left: 42 } },
-      { label: 'Ball of the foot / toes', nextNodeId: 'pf-metatarsal', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 98, left: 40 } },
+      { label: 'Under the heel (plantar surface)', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 62, left: 32 } },
+      { label: 'Back of heel (Achilles area)', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 55, left: 28 } },
+      { label: 'Arch of the foot', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 60, left: 55 } },
+      { label: 'Ball of the foot / toes', nextNodeId: 'pf-metatarsal', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 68, left: 68 } },
     ],
   },
   'pf-q3': {
@@ -365,9 +365,9 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q1', type: 'question', category: 'location',
     content: 'Where is your elbow pain located?',
     options: [
-      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior', pin: { top: 35, left: 10 } },
-      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 35, left: 20 } },
-      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior', pin: { top: 35, left: 15 } },
+      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior', pin: { top: 32, left: 48 } },
+      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 32, left: 42 } },
+      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior', pin: { top: 35, left: 45 } },
     ],
   },
   'te-q2': {
@@ -421,9 +421,9 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'gp-q1', type: 'question', category: 'location',
     content: 'Where in the groin/hip area is your pain?',
     options: [
-      { label: 'Inner thigh / adductor area', nextNodeId: 'gp-referral', highlightMuscles: ['adductor'], modelType: 'anterior', pin: { top: 52, left: 45 } },
-      { label: 'Front of hip / crease', nextNodeId: 'gp-referral', highlightMuscles: ['abs', 'quadriceps'], modelType: 'anterior', pin: { top: 48, left: 40 } },
-      { label: 'Pubic bone area', nextNodeId: 'gp-referral', highlightMuscles: ['abs'], modelType: 'anterior', pin: { top: 50, left: 50 } },
+      { label: 'Inner thigh / adductor area', nextNodeId: 'gp-referral', highlightMuscles: ['adductor'], modelType: 'anterior', pin: { top: 55, left: 55 } },
+      { label: 'Front of hip / crease', nextNodeId: 'gp-referral', highlightMuscles: ['abs', 'quadriceps'], modelType: 'anterior', pin: { top: 48, left: 45 } },
+      { label: 'Pubic bone area', nextNodeId: 'gp-referral', highlightMuscles: ['abs'], modelType: 'anterior', pin: { top: 55, left: 50 } },
     ],
   },
   'gp-referral': {
@@ -434,7 +434,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'mtss-q1', type: 'question', category: 'location',
     content: 'Where along your shin is the pain?',
     options: [
-      { label: 'Diffuse pain along inner shin (>5cm area)', nextNodeId: 'mtss-result', highlightMuscles: ['calves'], modelType: 'anterior', pin: { top: 82, left: 43 } },
+      { label: 'Diffuse pain along inner shin (>5cm area)', nextNodeId: 'mtss-result', highlightMuscles: ['calves'], modelType: 'anterior', pin: { top: 28, left: 45 } },
       { label: 'Focal point tenderness (<5cm)', nextNodeId: 'mtss-stress-fx' },
     ],
   },
@@ -507,7 +507,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Golfer's Elbow Tree ════ */
   'ge-q1': { id: 'ge-q1', type: 'question', category: 'location', content: 'Is your pain on the INNER (medial) side of the elbow?',
-    options: [{ label: 'Yes — inner elbow with gripping/flexion pain', nextNodeId: 'ge-result', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 35, left: 20 } }, { label: 'No — outer elbow', nextNodeId: 'te-q1', highlightMuscles: ['forearm', 'triceps'], modelType: 'posterior' }] },
+    options: [{ label: 'Yes — inner elbow with gripping/flexion pain', nextNodeId: 'ge-result', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 32, left: 42 } }, { label: 'No — outer elbow', nextNodeId: 'te-q1', highlightMuscles: ['forearm', 'triceps'], modelType: 'posterior' }] },
   'ge-result': { id: 'ge-result', type: 'result', resultInjuryId: 'golfers-elbow', content: 'Your symptoms are consistent with medial epicondylalgia (golfer\'s elbow). This is a tendinopathy of the common flexor origin.', detail: 'Treatment mirrors tennis elbow — isometric loading progressing to eccentric and heavy slow resistance exercises.' },
 
   /* ════ Carpal Tunnel Tree ════ */
@@ -517,7 +517,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ De Quervain's Tree ════ */
   'dq-q1': { id: 'dq-q1', type: 'question', category: 'location', content: 'Is your pain at the thumb-side of the wrist, worsened by gripping or moving the thumb?',
-    options: [{ label: 'Yes — radial wrist pain with thumb use', nextNodeId: 'dq-result', highlightMuscles: ['forearm'], modelType: 'anterior', pin: { top: 48, left: 10 } }, { label: 'No — different location', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — radial wrist pain with thumb use', nextNodeId: 'dq-result', highlightMuscles: ['forearm'], modelType: 'anterior', pin: { top: 62, left: 32 } }, { label: 'No — different location', nextNodeId: 'no-match' }] },
   'dq-result': { id: 'dq-result', type: 'result', resultInjuryId: 'de-quervain', content: 'Your symptoms suggest De Quervain\'s tenosynovitis — inflammation of the thumb-side wrist tendons.', detail: 'Treatment includes thumb spica splinting, activity modification, and gentle tendon gliding exercises.' },
 
   /* ════ Wrist Sprain Tree ════ */
@@ -597,12 +597,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ ITB Syndrome Tree ════ */
   'itb-q1': { id: 'itb-q1', type: 'question', category: 'symptom', content: 'Is your pain on the OUTER (lateral) side of your knee, typically starting after a consistent distance of running?',
-    options: [{ label: 'Yes — lateral knee pain at specific distance', nextNodeId: 'itb-result', highlightMuscles: ['knees', 'hamstring'], modelType: 'anterior', pin: { top: 72, left: 35 } }, { label: 'No — different pattern', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — lateral knee pain at specific distance', nextNodeId: 'itb-result', highlightMuscles: ['knees', 'hamstring'], modelType: 'anterior', pin: { top: 48, left: 32 } }, { label: 'No — different pattern', nextNodeId: 'pfps-q1' }] },
   'itb-result': { id: 'itb-result', type: 'result', resultInjuryId: 'itb-syndrome', content: 'Your symptoms are consistent with IT Band Syndrome. Lateral knee pain that starts at a consistent running distance is characteristic.', detail: 'Treatment focuses on hip abductor strengthening, running load management, and addressing step width. Foam rolling provides symptom relief.' },
 
   /* ════ Patellar Tendinopathy Tree ════ */
   'ptend-q1': { id: 'ptend-q1', type: 'question', category: 'location', content: 'Is your pain precisely at the bottom tip of the kneecap (inferior pole of patella)?',
-    options: [{ label: 'Yes — localized inferior pole pain', nextNodeId: 'ptend-result', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 74, left: 40 } }, { label: 'Diffuse anterior knee pain', nextNodeId: 'pfps-q1', highlightMuscles: ['knees', 'quadriceps'], modelType: 'anterior' }] },
+    options: [{ label: 'Yes — localized inferior pole pain', nextNodeId: 'ptend-result', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 62, left: 50 } }, { label: 'Diffuse anterior knee pain', nextNodeId: 'pfps-q1', highlightMuscles: ['knees', 'quadriceps'], modelType: 'anterior' }] },
   'ptend-result': { id: 'ptend-result', type: 'result', resultInjuryId: 'patellar-tendinopathy', content: 'Your symptoms are consistent with patellar tendinopathy (jumper\'s knee). Localized inferior pole pain with jumping/landing is characteristic.', detail: 'Treatment involves heavy slow resistance loading (decline squats), load management, and addressing kinetic chain factors.' },
 
   /* ════ Quad Strain Tree ════ */
@@ -746,7 +746,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
   'tsf-q1': { id: 'tsf-q1', type: 'question', category: 'symptom', content: 'Do you have localized shin pain that you can pinpoint with ONE finger (not the diffuse area of shin splints)?',
     options: [{ label: 'Yes — focal point tenderness', nextNodeId: 'tsf-q2' }, { label: 'Diffuse, spread-out shin pain', nextNodeId: 'no-match' }] },
   'tsf-q2': { id: 'tsf-q2', type: 'question', category: 'location', content: 'Is the tender point on the FRONT (anterior) edge of the tibia?',
-    options: [{ label: 'Yes - anterior tibial tenderness', nextNodeId: 'tsf-urgent', highlightMuscles: ['calves'], modelType: 'anterior', pin: { top: 82, left: 40 } }, { label: 'No - medial (inner) or posterior shin', nextNodeId: 'tsf-result', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 82, left: 43 } }] },
+    options: [{ label: 'Yes - anterior tibial tenderness', nextNodeId: 'tsf-urgent', highlightMuscles: ['calves'], modelType: 'anterior', pin: { top: 30, left: 45 } }, { label: 'No - medial (inner) or posterior shin', nextNodeId: 'tsf-result', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 28, left: 45 } }] },
   'tsf-result': { id: 'tsf-result', type: 'result', resultInjuryId: 'tibial-stress-fracture', content: 'Your symptoms suggest a tibial stress fracture (posteromedial — LOW risk). Focal shin pain that worsens with running and improves with rest.', detail: 'Rest from running for 6-8 weeks. Cross-train with non-impact activities. Gradual return using the 10% rule. Address training load, nutrition, and bone health.' },
   'tsf-urgent': { id: 'tsf-urgent', type: 'referral', content: '⚠️ Anterior tibial stress fracture is HIGH-RISK — the tension side of the bone heals poorly. Seek urgent orthopaedic assessment. May require extended non-weight-bearing or surgical fixation.' },
 
@@ -816,7 +816,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ GTPS Tree ════ */
   'gtps-q1': { id: 'gtps-q1', type: 'question', category: 'location', content: 'Is your pain on the OUTSIDE of your hip, over the bony prominence, especially when lying on that side at night?',
-    options: [{ label: 'Yes - lateral hip pain, worse lying on it', nextNodeId: 'gtps-result', highlightMuscles: ['abductors', 'gluteal'], modelType: 'posterior', pin: { top: 48, left: 35 } }, { label: 'Pain in the groin, not lateral', nextNodeId: 'hoa-q1', highlightMuscles: ['adductor', 'abs'], modelType: 'anterior' }] },
+    options: [{ label: 'Yes - lateral hip pain, worse lying on it', nextNodeId: 'gtps-result', highlightMuscles: ['abductors', 'gluteal'], modelType: 'posterior', pin: { top: 50, left: 30 } }, { label: 'Pain in the groin, not lateral', nextNodeId: 'hoa-q1', highlightMuscles: ['adductor', 'abs'], modelType: 'anterior' }] },
   'gtps-result': { id: 'gtps-result', type: 'result', resultInjuryId: 'gtps', content: 'Your symptoms are consistent with Greater Trochanteric Pain Syndrome (GTPS) — now understood as primarily a gluteal tendinopathy.', detail: 'Progressive gluteal loading (avoid positions of tendon compression like crossing legs/side-lying without pillow). Isometric hip abduction → side-lying abduction → standing. 8-12 weeks.' },
 
   /* ════ Snapping Hip Tree ════ */
@@ -843,7 +843,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Pes Anserine Tree ════ */
   'pa-q1': { id: 'pa-q1', type: 'question', category: 'location', content: 'Is your pain on the INNER side of the shin, about 5cm BELOW the knee joint line?',
-    options: [{ label: 'Yes - anteromedial tibia, below joint line', nextNodeId: 'pa-result', highlightMuscles: ['knees', 'calves'], modelType: 'anterior', pin: { top: 76, left: 43 } }, { label: 'Pain at joint line or above', nextNodeId: 'pfps-q1', highlightMuscles: ['knees'], modelType: 'anterior' }] },
+    options: [{ label: 'Yes - anteromedial tibia, below joint line', nextNodeId: 'pa-result', highlightMuscles: ['knees', 'calves'], modelType: 'anterior', pin: { top: 68, left: 62 } }, { label: 'Pain at joint line or above', nextNodeId: 'pfps-q1', highlightMuscles: ['knees'], modelType: 'anterior' }] },
   'pa-result': { id: 'pa-result', type: 'result', resultInjuryId: 'pes-anserine', content: 'Your symptoms suggest pes anserine bursitis/tendinopathy. Pain below the medial joint line at the pes anserine insertion.', detail: 'Load management, hamstring and hip adductor stretching, addressing biomechanics (valgus, overpronation). Ice after activity.' },
 
   /* ════ Prepatellar Bursitis Tree ════ */
@@ -856,7 +856,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Plica Syndrome Tree ════ */
   'plic-q1': { id: 'plic-q1', type: 'question', category: 'symptom', content: 'Do you feel a snapping or clicking band on the inner side of your kneecap during bending/straightening?',
-    options: [{ label: 'Yes - palpable snapping band medial to patella', nextNodeId: 'plic-result', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 44 } }, { label: 'No snapping', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes - palpable snapping band medial to patella', nextNodeId: 'plic-result', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 50, left: 58 } }, { label: 'No snapping', nextNodeId: 'pfps-q1' }] },
   'plic-result': { id: 'plic-result', type: 'result', resultInjuryId: 'plica-syndrome', content: 'Your symptoms suggest medial plica irritation. A thickened synovial fold catching during knee movement.', detail: 'Activity modification, quad strengthening, stretching. Anti-inflammatory measures. If refractory to 8-12 weeks of conservative treatment, arthroscopic plica excision is very effective.' },
 
   /* ════ Turf Toe Tree ════ */
@@ -879,7 +879,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Posterior Ankle Impingement Tree ════ */
   'pai-q1': { id: 'pai-q1', type: 'question', category: 'symptom', content: 'Do you have pain at the BACK of the ankle specifically when pointing your foot (plantarflexion), such as in ballet relevé or kicking?',
-    options: [{ label: 'Yes - posterior ankle pain with plantarflexion', nextNodeId: 'pai-result', highlightMuscles: ['calves', 'left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 90, left: 40 } }, { label: 'Pain elsewhere', nextNodeId: 'at-q1' }] },
+    options: [{ label: 'Yes - posterior ankle pain with plantarflexion', nextNodeId: 'pai-result', highlightMuscles: ['calves', 'left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 48, left: 30 } }, { label: 'Pain elsewhere', nextNodeId: 'at-q1' }] },
   'pai-result': { id: 'pai-result', type: 'result', resultInjuryId: 'posterior-ankle-impingement', content: 'Your symptoms suggest posterior ankle impingement — compression of structures at the back of the ankle during plantarflexion.', detail: 'Modify activities that require maximal plantarflexion. Strengthening, taping. Imaging to check for os trigonum. If refractory, surgical excision of os trigonum is very effective.' },
 
   /* ════ Morton's Neuroma Tree ════ */

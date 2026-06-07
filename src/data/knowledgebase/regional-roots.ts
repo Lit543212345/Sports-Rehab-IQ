@@ -13,7 +13,7 @@ export const regionalRoots: DiagnosticNode[] = [
       { label: 'Foot or Heel', nextNodeId: 'llaf-foot', highlightMuscles: ['calves'], pin: { top: 65, left: 45, zoom: 3.5 } },
       { label: 'Ankle or outside of foot', nextNodeId: 'llaf-ankle', highlightMuscles: ['calves'], pin: { top: 45, left: 35, zoom: 3.5 } },
       { label: 'Back of Heel / Achilles', nextNodeId: 'llaf-achilles', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 55, left: 28, zoom: 3.5 } },
-      { label: 'Lower Leg / Shin / Calf', nextNodeId: 'llaf-leg', highlightMuscles: ['calves'], pin: { top: 25, left: 25, zoom: 3.5 } },
+      { label: 'Lower Leg / Shin / Calf', nextNodeId: 'llaf-leg', highlightMuscles: ['calves'], pin: { top: 25, left: 45, zoom: 3.5 } },
     ]
   },
   {
@@ -59,8 +59,8 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your lower leg pain?',
     options: [
-      { label: 'Aching pain along the inner shin bone during/after exercise', nextNodeId: 'mtss-q1', highlightMuscles: ['calves'], pin: { top: 28, left: 28, zoom: 3.5 } },
-      { label: 'Localized bone pain on the shin that worsens with weight-bearing', nextNodeId: 'tsf-q1', highlightMuscles: ['calves'], pin: { top: 30, left: 25, zoom: 3.5 } },
+      { label: 'Aching pain along the inner shin bone during/after exercise', nextNodeId: 'mtss-q1', highlightMuscles: ['calves'], pin: { top: 28, left: 45, zoom: 3.5 } },
+      { label: 'Localized bone pain on the shin that worsens with weight-bearing', nextNodeId: 'tsf-q1', highlightMuscles: ['calves'], pin: { top: 30, left: 45, zoom: 3.5 } },
       { label: 'Sudden, sharp pain in the calf muscle during push-off', nextNodeId: 'cs-q1', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 25, left: 25, zoom: 3.0 } },
       { label: 'Deep, aching tightness in the lower leg that builds predictably during exercise', nextNodeId: 'cecs-q1', highlightMuscles: ['calves'], pin: { top: 30, left: 25, zoom: 3.0 } },
     ]

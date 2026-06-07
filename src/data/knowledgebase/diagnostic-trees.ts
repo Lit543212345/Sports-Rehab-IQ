@@ -87,7 +87,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'acl-q1', type: 'question', category: 'mechanism',
     content: 'How did your knee injury occur?',
     options: [
-      { label: 'Non-contact pivot/cut/landing', nextNodeId: 'acl-q2' },
+      { label: 'Non-contact pivot/cut/landing', nextNodeId: 'acl-q2', pin: { top: 50, left: 50 } },
       { label: 'Direct blow to knee', nextNodeId: 'acl-q2' },
       { label: 'Hyperextension', nextNodeId: 'acl-q2' },
       { label: 'Gradual onset — no specific event', nextNodeId: 'pfps-q1' },
@@ -136,7 +136,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pfps-q1', type: 'question', category: 'onset',
     content: 'How did your knee pain begin?',
     options: [
-      { label: 'Gradually — no specific injury', nextNodeId: 'pfps-q2' },
+      { label: 'Gradually — no specific injury', nextNodeId: 'pfps-q2', pin: { top: 50, left: 50 } },
       { label: 'After increasing training volume', nextNodeId: 'pfps-q2' },
       { label: 'After a specific traumatic event', nextNodeId: 'acl-q1' },
     ],
@@ -195,7 +195,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pf-q1', type: 'question', category: 'symptom',
     content: 'Is your pain worst with your first steps in the morning?',
     options: [
-      { label: 'Yes — classic first-step pain', nextNodeId: 'pf-q2' },
+      { label: 'Yes — classic first-step pain', nextNodeId: 'pf-q2', pin: { top: 62, left: 32 } },
       { label: 'No — pain is constant or worse at night', nextNodeId: 'pf-night' },
     ],
   },
@@ -241,7 +241,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'conc-q1', type: 'question', category: 'mechanism',
     content: '⚠️ IMPORTANT: Did you experience a blow or jolt to the head, face, or body that transmitted force to the head?',
     options: [
-      { label: 'Yes — direct or indirect head impact', nextNodeId: 'conc-q2' },
+      { label: 'Yes — direct or indirect head impact', nextNodeId: 'conc-q2', pin: { top: 25, left: 50 } },
       { label: 'No head impact', nextNodeId: 'conc-no' },
     ],
   },
@@ -251,7 +251,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     detail: 'Neck pain, double vision, weakness/tingling in arms/legs, severe headache, seizure, loss of consciousness, deteriorating, confusion, vomiting',
     options: [
       { label: 'YES — one or more red flags present', nextNodeId: 'conc-emergency' },
-      { label: 'No red flags currently', nextNodeId: 'conc-q3' },
+      { label: 'No red flags currently', nextNodeId: 'conc-q3', pin: { top: 25, left: 50 } },
     ],
   },
   'conc-q3': {
@@ -286,7 +286,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'rc-q1', type: 'question', category: 'onset',
     content: 'How did your shoulder pain begin?',
     options: [
-      { label: 'Gradually — increasing over weeks/months', nextNodeId: 'rc-q2' },
+      { label: 'Gradually — increasing over weeks/months', nextNodeId: 'rc-q2', pin: { top: 45, left: 52 } },
       { label: 'Sudden — after a specific injury or fall', nextNodeId: 'rc-acute' },
     ],
   },
@@ -294,7 +294,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'rc-q2', type: 'question', category: 'symptom',
     content: 'Which movements are most painful?',
     options: [
-      { label: 'Reaching overhead or behind back', nextNodeId: 'rc-q3' },
+      { label: 'Reaching overhead or behind back', nextNodeId: 'rc-q3', pin: { top: 45, left: 52 } },
       { label: 'Lying on the affected shoulder at night', nextNodeId: 'rc-q3' },
       { label: 'Lifting objects away from body', nextNodeId: 'rc-q3' },
     ],
@@ -304,7 +304,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     content: 'Painful Arc Test: Slowly raise your arm out to the side. Note where the pain occurs.',
     detail: 'Classic painful arc: pain between 60°-120° of abduction suggests subacromial pathology.',
     options: [
-      { label: 'Pain in the 60-120° range', nextNodeId: 'rc-result' },
+      { label: 'Pain in the 60-120° range', nextNodeId: 'rc-result', pin: { top: 45, left: 52 } },
       { label: 'Pain above 120° only', nextNodeId: 'rc-ac-joint' },
       { label: 'Pain throughout entire range', nextNodeId: 'rc-severe' },
     ],
@@ -374,7 +374,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q2', type: 'question', category: 'symptom',
     content: 'Is your pain worse when gripping, turning a doorknob, or lifting with palm down?',
     options: [
-      { label: 'Yes — gripping/wrist extension aggravates it', nextNodeId: 'te-q3' },
+      { label: 'Yes — gripping/wrist extension aggravates it', nextNodeId: 'te-q3', pin: { top: 32, left: 48 } },
       { label: 'No — pain is more with bending/flexion', nextNodeId: 'te-medial' },
     ],
   },
@@ -382,7 +382,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q3', type: 'physical-test', category: 'test',
     content: 'Cozen\'s Test: Make a fist and extend your wrist upward against resistance (push against a table). Does this reproduce your lateral elbow pain?',
     options: [
-      { label: 'Yes — reproduces my pain', nextNodeId: 'te-result' },
+      { label: 'Yes — reproduces my pain', nextNodeId: 'te-result', pin: { top: 32, left: 48 } },
       { label: 'No pain with this test', nextNodeId: 'te-other' },
     ],
   },
@@ -467,36 +467,36 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Whiplash Tree ════ */
   'wad-q1': { id: 'wad-q1', type: 'question', category: 'mechanism', content: 'Did you experience a sudden acceleration-deceleration force to the neck?',
-    options: [{ label: 'Yes — collision, tackle, or whiplash', nextNodeId: 'wad-q2' }, { label: 'Gradual onset neck pain', nextNodeId: 'cr-q1' }] },
+    options: [{ label: 'Yes — collision, tackle, or whiplash', nextNodeId: 'wad-q2', pin: { top: 65, left: 50 } }, { label: 'Gradual onset neck pain', nextNodeId: 'cr-q1' }] },
   'wad-q2': { id: 'wad-q2', type: 'question', category: 'symptom', content: 'Do you have ANY of these: weakness/numbness in arms, severe midline neck tenderness, or inability to rotate neck 45°?',
-    options: [{ label: 'Yes — red flag present', nextNodeId: 'wad-emergency' }, { label: 'No — pain and stiffness only', nextNodeId: 'wad-result' }] },
+    options: [{ label: 'Yes — red flag present', nextNodeId: 'wad-emergency' }, { label: 'No — pain and stiffness only', nextNodeId: 'wad-result', pin: { top: 65, left: 50 } }] },
   'wad-result': { id: 'wad-result', type: 'result', resultInjuryId: 'whiplash', content: 'Your symptoms are consistent with WAD Grade I-II. Early active movement is recommended over rest and collar immobilization.', detail: 'Reassurance, gentle ROM exercises, and graded return to activity. Most cases resolve in 4-12 weeks.' },
   'wad-emergency': { id: 'wad-emergency', type: 'referral', content: '🚨 Red flag symptoms detected. Seek emergency assessment — possible cervical fracture, dislocation, or spinal cord injury.' },
 
   /* ════ Cervical Radiculopathy Tree ════ */
   'cr-q1': { id: 'cr-q1', type: 'question', category: 'symptom', content: 'Does your neck pain radiate into your arm with numbness, tingling, or weakness?',
-    options: [{ label: 'Yes — arm symptoms present', nextNodeId: 'cr-result' }, { label: 'No — neck pain only', nextNodeId: 'cr-referral' }] },
+    options: [{ label: 'Yes — arm symptoms present', nextNodeId: 'cr-result', pin: { top: 65, left: 50 } }, { label: 'No — neck pain only', nextNodeId: 'cr-referral' }] },
   'cr-result': { id: 'cr-result', type: 'result', resultInjuryId: 'cervical-radiculopathy', content: 'Your symptoms suggest cervical radiculopathy — a compressed nerve root in the neck radiating into the arm.', detail: 'Most cases improve with conservative management. Seek professional assessment for severe or progressive weakness.' },
   'cr-referral': { id: 'cr-referral', type: 'referral', content: 'Neck pain without arm symptoms may be mechanical neck pain. Professional assessment recommended for persistent cases.' },
 
   /* ════ Shoulder Instability Tree ════ */
   'si-q1': { id: 'si-q1', type: 'question', category: 'mechanism', content: 'Has your shoulder ever fully dislocated or do you feel it may "slip out"?',
-    options: [{ label: 'Yes — previous dislocation or subluxation', nextNodeId: 'si-result' }, { label: 'Feeling of looseness/apprehension only', nextNodeId: 'si-result' }, { label: 'No instability', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — previous dislocation or subluxation', nextNodeId: 'si-result', pin: { top: 45, left: 52 } }, { label: 'Feeling of looseness/apprehension only', nextNodeId: 'si-result', pin: { top: 45, left: 52 } }, { label: 'No instability', nextNodeId: 'rc-q1' }] },
   'si-result': { id: 'si-result', type: 'result', resultInjuryId: 'shoulder-instability', content: 'Your symptoms suggest shoulder instability. This requires structured rehabilitation focusing on rotator cuff and scapular stabilization.', detail: 'Recurrence risk is high in young athletes (<25). Professional assessment recommended to determine if surgical stabilization is needed.' },
 
   /* ════ AC Joint Tree ════ */
   'ac-q1': { id: 'ac-q1', type: 'question', category: 'mechanism', content: 'Did you fall directly onto the point of your shoulder or the top of your shoulder?',
-    options: [{ label: 'Yes — direct fall onto shoulder', nextNodeId: 'ac-result' }, { label: 'No — different mechanism', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — direct fall onto shoulder', nextNodeId: 'ac-result', pin: { top: 25, left: 45 } }, { label: 'No — different mechanism', nextNodeId: 'rc-q1' }] },
   'ac-result': { id: 'ac-result', type: 'result', resultInjuryId: 'ac-joint-injury', content: 'Your mechanism and symptoms suggest an AC joint injury. Pain at the top of the shoulder with localized tenderness over the AC joint is characteristic.', detail: 'Grade I-III usually managed conservatively with sling and rehabilitation. Visible step deformity at the AC joint suggests higher grade.' },
 
   /* ════ Frozen Shoulder Tree ════ */
   'fs-q1': { id: 'fs-q1', type: 'question', category: 'symptom', content: 'Is your shoulder progressively losing range of motion in ALL directions over weeks/months?',
-    options: [{ label: 'Yes — global stiffness getting worse', nextNodeId: 'fs-result' }, { label: 'No — specific movements are painful but range is OK', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — global stiffness getting worse', nextNodeId: 'fs-result', pin: { top: 45, left: 52 } }, { label: 'No — specific movements are painful but range is OK', nextNodeId: 'rc-q1' }] },
   'fs-result': { id: 'fs-result', type: 'result', resultInjuryId: 'frozen-shoulder', content: 'Your symptoms suggest adhesive capsulitis (frozen shoulder). The progressive loss of active AND passive motion is the hallmark.', detail: 'Self-limiting condition (12-36 months). Gentle ROM exercises and physiotherapy can speed recovery. Most common in 40-65 age group and diabetics.' },
 
   /* ════ SLAP Tear Tree ════ */
   'slap-q1': { id: 'slap-q1', type: 'question', category: 'symptom', content: 'Do you experience deep shoulder pain with clicking or catching during overhead movements?',
-    options: [{ label: 'Yes — clicking/catching with overhead use', nextNodeId: 'slap-result' }, { label: 'No — pain but no mechanical symptoms', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — clicking/catching with overhead use', nextNodeId: 'slap-result', pin: { top: 45, left: 52 } }, { label: 'No — pain but no mechanical symptoms', nextNodeId: 'rc-q1' }] },
   'slap-result': { id: 'slap-result', type: 'result', resultInjuryId: 'slap-tear', content: 'Your symptoms suggest a possible labral (SLAP) tear. Deep shoulder pain with mechanical symptoms in an overhead athlete is characteristic.', detail: 'Professional assessment with MRA is recommended. Many labral tears can be managed conservatively with rotator cuff and scapular strengthening.' },
 
   /* ════ EAMC Tree ════ */
@@ -512,7 +512,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Carpal Tunnel Tree ════ */
   'cts-q1': { id: 'cts-q1', type: 'question', category: 'symptom', content: 'Do you experience numbness or tingling in your thumb, index, and middle fingers?',
-    options: [{ label: 'Yes — especially at night or with sustained gripping', nextNodeId: 'cts-result' }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — especially at night or with sustained gripping', nextNodeId: 'cts-result', pin: { top: 62, left: 35 } }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
   'cts-result': { id: 'cts-result', type: 'result', resultInjuryId: 'carpal-tunnel', content: 'Your symptoms suggest carpal tunnel syndrome — compression of the median nerve at the wrist.', detail: 'Conservative treatment includes splinting (especially at night), nerve gliding exercises, and activity modification.' },
 
   /* ════ De Quervain's Tree ════ */
@@ -522,76 +522,76 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Wrist Sprain Tree ════ */
   'ws-q1': { id: 'ws-q1', type: 'question', category: 'mechanism', content: 'Did you fall on an outstretched hand (FOOSH)?',
-    options: [{ label: 'Yes — FOOSH injury', nextNodeId: 'ws-q2' }, { label: 'Gradual onset', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — FOOSH injury', nextNodeId: 'ws-q2', pin: { top: 62, left: 35 } }, { label: 'Gradual onset', nextNodeId: 'no-match' }] },
   'ws-q2': { id: 'ws-q2', type: 'question', category: 'location', content: 'Is there tenderness in the anatomical snuffbox (hollow at base of thumb on back of wrist)?',
-    options: [{ label: 'Yes — snuffbox tender', nextNodeId: 'ws-referral' }, { label: 'No — general wrist pain', nextNodeId: 'ws-result' }] },
+    options: [{ label: 'Yes — snuffbox tender', nextNodeId: 'ws-referral', pin: { top: 62, left: 32 } }, { label: 'No — general wrist pain', nextNodeId: 'ws-result', pin: { top: 62, left: 35 } }] },
   'ws-result': { id: 'ws-result', type: 'result', resultInjuryId: 'wrist-sprain', content: 'Your symptoms suggest a wrist sprain. RICE protocol and supportive splinting recommended.', detail: 'If pain persists beyond 2 weeks, seek imaging to rule out occult fracture.' },
   'ws-referral': { id: 'ws-referral', type: 'referral', content: '⚠️ Anatomical snuffbox tenderness after a fall suggests possible scaphoid fracture. X-ray required — treat as fracture until proven otherwise.' },
 
   /* ════ Trigger Finger Tree ════ */
   'tf-q1': { id: 'tf-q1', type: 'question', category: 'symptom', content: 'Does your finger catch, lock, or snap when bending/straightening?',
-    options: [{ label: 'Yes — triggering/catching present', nextNodeId: 'tf-result' }, { label: 'No catching', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — triggering/catching present', nextNodeId: 'tf-result', pin: { top: 78, left: 52 } }, { label: 'No catching', nextNodeId: 'no-match' }] },
   'tf-result': { id: 'tf-result', type: 'result', resultInjuryId: 'trigger-finger', content: 'Your symptoms are consistent with trigger finger (stenosing tenosynovitis).', detail: 'Conservative management includes activity modification and gentle stretching. Corticosteroid injection is effective. Surgery (A1 pulley release) if conservative management fails.' },
 
   /* ════ Non-Specific LBP Tree ════ */
   'nslbp-q1': { id: 'nslbp-q1', type: 'question', category: 'symptom', content: 'Is your back pain mostly in the lower back without leg pain below the knee?',
-    options: [{ label: 'Yes — low back pain, no significant leg symptoms', nextNodeId: 'nslbp-result' }, { label: 'Significant leg pain/numbness below knee', nextNodeId: 'ldh-q1' }] },
+    options: [{ label: 'Yes — low back pain, no significant leg symptoms', nextNodeId: 'nslbp-result', pin: { top: 60, left: 50 } }, { label: 'Significant leg pain/numbness below knee', nextNodeId: 'ldh-q1' }] },
   'nslbp-result': { id: 'nslbp-result', type: 'result', resultInjuryId: 'non-specific-lbp', content: 'Your symptoms are consistent with non-specific low back pain — the most common type of back pain. This is NOT a serious condition.', detail: 'Stay active. Avoid bed rest. Gradual return to normal activities is the best treatment. Core stability exercises and walking are first-line management.' },
 
   /* ════ Spondylolysis Tree ════ */
   'spon-q1': { id: 'spon-q1', type: 'question', category: 'symptom', content: 'Does your back pain worsen with extension (leaning backward) and improve with flexion (bending forward)?',
-    options: [{ label: 'Yes — extension-biased pain', nextNodeId: 'spon-result' }, { label: 'No — different pattern', nextNodeId: 'nslbp-q1' }] },
+    options: [{ label: 'Yes — extension-biased pain', nextNodeId: 'spon-result', pin: { top: 60, left: 50 } }, { label: 'No — different pattern', nextNodeId: 'nslbp-q1' }] },
   'spon-result': { id: 'spon-result', type: 'result', resultInjuryId: 'spondylolysis', content: 'Extension-biased back pain in a young athlete suggests possible spondylolysis (pars stress fracture).', detail: 'Professional assessment with imaging is recommended. Activity modification (avoiding extension loading) for 6-12 weeks is typically required.' },
 
   /* ════ Thoracic Pain Tree ════ */
   'tp-q1': { id: 'tp-q1', type: 'question', category: 'location', content: 'Is your pain in the upper/mid back or rib area?',
-    options: [{ label: 'Yes — thoracic/rib pain', nextNodeId: 'tp-result' }, { label: 'Chest pain with breathing difficulty', nextNodeId: 'tp-emergency' }] },
+    options: [{ label: 'Yes — thoracic/rib pain', nextNodeId: 'tp-result', pin: { top: 35, left: 50 } }, { label: 'Chest pain with breathing difficulty', nextNodeId: 'tp-emergency' }] },
   'tp-result': { id: 'tp-result', type: 'result', resultInjuryId: 'thoracic-pain', content: 'Your symptoms suggest thoracic spine pain or costochondritis. Often postural in nature and responds well to mobilization.', detail: 'Posture correction, thoracic extension exercises, and gentle foam rolling are first-line treatments.' },
   'tp-emergency': { id: 'tp-emergency', type: 'referral', content: '🚨 Chest pain with breathing difficulty must be assessed urgently to rule out cardiac and pulmonary causes. Seek emergency care.' },
 
   /* ════ Lumbar Stenosis Tree ════ */
   'ls-q1': { id: 'ls-q1', type: 'question', category: 'symptom', content: 'Does walking cause progressive leg heaviness/pain that is relieved by sitting or leaning forward?',
-    options: [{ label: 'Yes — classic neurogenic claudication pattern', nextNodeId: 'ls-result' }, { label: 'No — different pattern', nextNodeId: 'ldh-q1' }] },
+    options: [{ label: 'Yes — classic neurogenic claudication pattern', nextNodeId: 'ls-result', pin: { top: 65, left: 50 } }, { label: 'No — different pattern', nextNodeId: 'ldh-q1' }] },
   'ls-result': { id: 'ls-result', type: 'result', resultInjuryId: 'lumbar-stenosis', content: 'Your symptoms suggest lumbar spinal stenosis with neurogenic claudication.', detail: 'Flexion-based exercises (cycling, walking with a forward lean), core strengthening, and activity modification. Professional assessment recommended for severe cases.' },
 
   /* ════ FAI Tree ════ */
   'fai-q1': { id: 'fai-q1', type: 'question', category: 'symptom', content: 'Do you experience groin/hip pain that worsens with deep squatting, pivoting, or prolonged sitting?',
-    options: [{ label: 'Yes — deep hip/groin pain with these activities', nextNodeId: 'fai-result' }, { label: 'No — different pattern', nextNodeId: 'gp-q1' }] },
+    options: [{ label: 'Yes — deep hip/groin pain with these activities', nextNodeId: 'fai-result', pin: { top: 48, left: 45 } }, { label: 'No — different pattern', nextNodeId: 'gp-q1' }] },
   'fai-result': { id: 'fai-result', type: 'result', resultInjuryId: 'fai-syndrome', content: 'Your symptoms suggest femoroacetabular impingement (FAI). Deep hip/groin pain with a "C-sign" grip pattern is characteristic.', detail: 'Hip strengthening, activity modification, and avoiding deep flexion positions. Professional assessment recommended for imaging confirmation.' },
 
   /* ════ Hip Labral Tear Tree ════ */
   'hlt-q1': { id: 'hlt-q1', type: 'question', category: 'symptom', content: 'Do you experience clicking, catching, or locking in your hip joint?',
-    options: [{ label: 'Yes — mechanical symptoms present', nextNodeId: 'hlt-result' }, { label: 'No mechanical symptoms', nextNodeId: 'fai-q1' }] },
+    options: [{ label: 'Yes — mechanical symptoms present', nextNodeId: 'hlt-result', pin: { top: 48, left: 40 } }, { label: 'No mechanical symptoms', nextNodeId: 'fai-q1' }] },
   'hlt-result': { id: 'hlt-result', type: 'result', resultInjuryId: 'hip-labral-tear', content: 'Clicking/catching in the hip with groin pain suggests a possible hip labral tear.', detail: 'Often associated with FAI. Professional assessment with MRA recommended. Many cases respond to conservative hip strengthening.' },
 
   /* ════ Hip Stress Fracture Tree ════ */
   'hsf-q1': { id: 'hsf-q1', type: 'question', category: 'symptom', content: 'Do you have deep hip/groin pain that worsens with weight-bearing and is present at rest or at night?',
-    options: [{ label: 'Yes — weight-bearing pain with rest/night pain', nextNodeId: 'hsf-referral' }, { label: 'No rest or night pain', nextNodeId: 'fai-q1' }] },
+    options: [{ label: 'Yes — weight-bearing pain with rest/night pain', nextNodeId: 'hsf-referral', pin: { top: 48, left: 40 } }, { label: 'No rest or night pain', nextNodeId: 'fai-q1' }] },
   'hsf-referral': { id: 'hsf-referral', type: 'referral', content: '⚠️ Rest and night pain in the hip with exercise-related groin pain raises concern for a femoral neck stress fracture. Urgent imaging and non-weight-bearing recommended.' },
 
   /* ════ Calf Strain Tree ════ */
   'cs-q1': { id: 'cs-q1', type: 'question', category: 'mechanism', content: 'Did your calf pain start suddenly during pushing off, sprinting, or jumping?',
-    options: [{ label: 'Yes — sudden onset with push-off', nextNodeId: 'cs-result' }, { label: 'Gradual onset', nextNodeId: 'at-q1' }] },
+    options: [{ label: 'Yes — sudden onset with push-off', nextNodeId: 'cs-result', pin: { top: 25, left: 25 } }, { label: 'Gradual onset', nextNodeId: 'at-q1' }] },
   'cs-result': { id: 'cs-result', type: 'result', resultInjuryId: 'calf-strain', content: 'Your symptoms suggest a calf muscle strain (possible "tennis leg"). Acute onset with push-off mechanism is characteristic.', detail: 'POLICE protocol initially. Important to exclude DVT (calf pain + swelling + warmth) and Achilles rupture (no push-off strength).' },
 
   /* ════ Metatarsal Stress Fracture Tree ════ */
   'sffoot-q1': { id: 'sffoot-q1', type: 'question', category: 'symptom', content: 'Do you have forefoot pain that gradually worsened with activity and improves with rest?',
-    options: [{ label: 'Yes — activity-related forefoot pain', nextNodeId: 'sffoot-result' }, { label: 'Sudden onset', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — activity-related forefoot pain', nextNodeId: 'sffoot-result', pin: { top: 60, left: 55 } }, { label: 'Sudden onset', nextNodeId: 'no-match' }] },
   'sffoot-result': { id: 'sffoot-result', type: 'result', resultInjuryId: 'stress-fracture-foot', content: 'Your symptoms suggest a possible metatarsal stress fracture. Gradual onset forefoot pain with activity is characteristic.', detail: 'Reduce weight-bearing activity. Professional assessment with imaging is recommended, especially if pain is at the base of the 5th metatarsal (Jones fracture zone).' },
 
   /* ════ Peroneal Tendinopathy Tree ════ */
   'pt-q1': { id: 'pt-q1', type: 'question', category: 'location', content: 'Is your pain behind or below the outer ankle bone (lateral malleolus)?',
-    options: [{ label: 'Yes — pain behind lateral malleolus', nextNodeId: 'pt-result' }, { label: 'No — front or inner ankle', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — pain behind lateral malleolus', nextNodeId: 'pt-result', pin: { top: 48, left: 32 } }, { label: 'No — front or inner ankle', nextNodeId: 'no-match' }] },
   'pt-result': { id: 'pt-result', type: 'result', resultInjuryId: 'peroneal-tendinopathy', content: 'Your symptoms suggest peroneal tendinopathy. Pain behind the lateral malleolus with eversion weakness is characteristic.', detail: 'Often associated with chronic ankle instability. Peroneal strengthening and ankle stability exercises are the main treatments.' },
 
   /* ════ Ankle Impingement Tree ════ */
   'ai-q1': { id: 'ai-q1', type: 'question', category: 'symptom', content: 'Is your ankle pain specifically at the end of range — either full dorsiflexion (front) or full plantarflexion (back)?',
-    options: [{ label: 'Yes — pinching at end range', nextNodeId: 'ai-result' }, { label: 'No — pain through mid-range', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — pinching at end range', nextNodeId: 'ai-result', pin: { top: 42, left: 38 } }, { label: 'No — pain through mid-range', nextNodeId: 'no-match' }] },
   'ai-result': { id: 'ai-result', type: 'result', resultInjuryId: 'ankle-impingement', content: 'Your symptoms suggest ankle impingement syndrome — soft tissue or bony pinching at the end range.', detail: 'Anterior (front) impingement: common in footballers. Posterior (back): common in dancers. Treatment involves ROM exercises and activity modification.' },
 
   /* ════ Meniscal Tear Tree ════ */
   'men-q1': { id: 'men-q1', type: 'question', category: 'symptom', content: 'Does your knee catch, lock, or give way? Do you have joint line tenderness (pain along the side of the knee)?',
-    options: [{ label: 'Yes — catching/locking with joint line pain', nextNodeId: 'men-result' }, { label: 'Swelling but no mechanical symptoms', nextNodeId: 'men-referral' }] },
+    options: [{ label: 'Yes — catching/locking with joint line pain', nextNodeId: 'men-result', pin: { top: 50, left: 50 } }, { label: 'Swelling but no mechanical symptoms', nextNodeId: 'men-referral' }] },
   'men-result': { id: 'men-result', type: 'result', resultInjuryId: 'meniscal-tear', content: 'Your symptoms suggest a meniscal tear. Joint line tenderness with mechanical symptoms is the classic presentation.', detail: 'Many meniscal tears can be managed conservatively with strengthening. True locking requires urgent assessment for possible bucket-handle tear.' },
   'men-referral': { id: 'men-referral', type: 'referral', content: 'Knee swelling without clear mechanical symptoms may have various causes. Professional assessment recommended.' },
 
@@ -607,22 +607,22 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Quad Strain Tree ════ */
   'qs-q1': { id: 'qs-q1', type: 'question', category: 'mechanism', content: 'Did you experience sudden front-of-thigh pain during sprinting, kicking, or from a direct blow?',
-    options: [{ label: 'Yes — acute onset with activity or contact', nextNodeId: 'qs-result' }, { label: 'Gradual onset', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — acute onset with activity or contact', nextNodeId: 'qs-result', pin: { top: 15, left: 50 } }, { label: 'Gradual onset', nextNodeId: 'pfps-q1' }] },
   'qs-result': { id: 'qs-result', type: 'result', resultInjuryId: 'quadriceps-strain', content: 'Your symptoms suggest a quadriceps strain or contusion. Acute onset with sprinting/kicking or direct blow is the typical mechanism.', detail: 'POLICE protocol initially. Avoid aggressive stretching in the first 48h for contusions. Progressive strengthening once pain allows.' },
 
   /* ════ MCL Sprain Tree ════ */
   'mcl-q1': { id: 'mcl-q1', type: 'question', category: 'mechanism', content: 'Was there a force that pushed your knee inward (valgus force)?',
-    options: [{ label: 'Yes — blow to outside of knee or knee buckled inward', nextNodeId: 'mcl-result' }, { label: 'No valgus force', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — blow to outside of knee or knee buckled inward', nextNodeId: 'mcl-result', pin: { top: 50, left: 62 } }, { label: 'No valgus force', nextNodeId: 'pfps-q1' }] },
   'mcl-result': { id: 'mcl-result', type: 'result', resultInjuryId: 'mcl-sprain', content: 'Your symptoms suggest an MCL sprain. Valgus mechanism with medial knee pain and possible instability is characteristic.', detail: 'MCL heals well conservatively even with complete tears. Hinged brace and progressive rehab. Watch for combined ACL/meniscus injury.' },
 
   /* ════ Knee OA Tree ════ */
   'koa-q1': { id: 'koa-q1', type: 'question', category: 'symptom', content: 'Are you over 45 with gradual onset knee pain, morning stiffness (<30 min), and crepitus (grinding)?',
-    options: [{ label: 'Yes — fits OA criteria', nextNodeId: 'koa-result' }, { label: 'No — different profile', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — fits OA criteria', nextNodeId: 'koa-result', pin: { top: 50, left: 50 } }, { label: 'No — different profile', nextNodeId: 'pfps-q1' }] },
   'koa-result': { id: 'koa-result', type: 'result', resultInjuryId: 'knee-osteoarthritis', content: 'Your symptoms are consistent with knee osteoarthritis. Age >45, gradual onset, and morning stiffness <30 minutes are the clinical diagnostic criteria.', detail: 'Exercise is the FIRST-LINE treatment. Strengthening (especially quadriceps), low-impact cardio, and weight management are all strongly recommended.' },
 
   /* ════ Osgood-Schlatter Tree ════ */
   'os-q1': { id: 'os-q1', type: 'question', category: 'symptom', content: 'Are you aged 10-15 with pain and a bony bump at the top of the shin below the kneecap?',
-    options: [{ label: 'Yes — tibial tubercle pain in an adolescent', nextNodeId: 'os-result' }, { label: 'No — different profile', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — tibial tubercle pain in an adolescent', nextNodeId: 'os-result', pin: { top: 70, left: 50 } }, { label: 'No — different profile', nextNodeId: 'pfps-q1' }] },
   'os-result': { id: 'os-result', type: 'result', resultInjuryId: 'osgood-schlatter', content: 'Your symptoms are consistent with Osgood-Schlatter disease — a self-limiting condition of growing adolescents.', detail: 'Activity modification (not complete rest), ice after sport, and load management. Resolves with skeletal maturity. The bony prominence may persist but pain resolves.' },
 
   /* ═══════════════════════════════════════════════════════════════
@@ -631,21 +631,21 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Stingers & Burners Tree ════ */
   'sb-q1': { id: 'sb-q1', type: 'question', category: 'mechanism', content: 'Did you feel a sudden electric shock or burning sensation shooting down ONE arm after a tackle, collision, or neck movement?',
-    options: [{ label: 'Yes — one arm only', nextNodeId: 'sb-q2' }, { label: 'Both arms affected', nextNodeId: 'sb-emergency' }] },
+    options: [{ label: 'Yes — one arm only', nextNodeId: 'sb-q2', pin: { top: 65, left: 48 } }, { label: 'Both arms affected', nextNodeId: 'sb-emergency' }] },
   'sb-q2': { id: 'sb-q2', type: 'question', category: 'symptom', content: 'Did the burning/weakness resolve within minutes, or is it persisting?',
-    options: [{ label: 'Resolved within minutes', nextNodeId: 'sb-result' }, { label: 'Still present after 24+ hours', nextNodeId: 'sb-referral' }] },
+    options: [{ label: 'Resolved within minutes', nextNodeId: 'sb-result', pin: { top: 65, left: 48 } }, { label: 'Still present after 24+ hours', nextNodeId: 'sb-referral' }] },
   'sb-result': { id: 'sb-result', type: 'result', resultInjuryId: 'stingers-burners', content: 'Your symptoms are consistent with a stinger/burner — transient brachial plexus stretch. Common in contact sports.', detail: 'Typically resolves within minutes. DO NOT return to play until full strength and ROM are restored. Recurrent episodes need specialist assessment.' },
   'sb-referral': { id: 'sb-referral', type: 'referral', content: '⚠️ Persistent arm weakness or numbness beyond 24 hours suggests possible structural nerve injury. Professional assessment with EMG/NCS recommended.' },
   'sb-emergency': { id: 'sb-emergency', type: 'referral', content: '🚨 BILATERAL arm symptoms after neck trauma = possible spinal cord injury. Do NOT move. Call emergency services immediately.' },
 
   /* ════ Swimmer's Shoulder Tree ════ */
   'swsh-q1': { id: 'swsh-q1', type: 'question', category: 'mechanism', content: 'Are you a swimmer or overhead athlete with gradual onset shoulder pain during or after training?',
-    options: [{ label: 'Yes — overhead sport with gradual onset', nextNodeId: 'swsh-result' }, { label: 'No — not an overhead athlete', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — overhead sport with gradual onset', nextNodeId: 'swsh-result', pin: { top: 45, left: 52 } }, { label: 'No — not an overhead athlete', nextNodeId: 'rc-q1' }] },
   'swsh-result': { id: 'swsh-result', type: 'result', resultInjuryId: 'swimmers-shoulder', content: 'Your symptoms are consistent with swimmer\'s shoulder (overhead athlete shoulder). This is a supraspinatus tendinopathy from repetitive overhead loading.', detail: 'Load management (reduce swimming volume by 30-50%), scapular and rotator cuff strengthening, address thoracic mobility. Most respond well within 6-12 weeks.' },
 
   /* ════ Shoulder Bursitis Tree ════ */
   'sbur-q1': { id: 'sbur-q1', type: 'question', category: 'symptom', content: 'Do you have shoulder pain specifically between 60-120° of arm elevation (painful arc)?',
-    options: [{ label: 'Yes — painful arc pattern', nextNodeId: 'sbur-q2' }, { label: 'No painful arc', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — painful arc pattern', nextNodeId: 'sbur-q2', pin: { top: 45, left: 52 } }, { label: 'No painful arc', nextNodeId: 'rc-q1' }] },
   'sbur-q2': { id: 'sbur-q2', type: 'question', category: 'symptom', content: 'Is the shoulder hot, red, or swollen with fever?',
     options: [{ label: 'Yes — hot/red/fever', nextNodeId: 'sbur-emergency' }, { label: 'No infection signs', nextNodeId: 'sbur-result' }] },
   'sbur-result': { id: 'sbur-result', type: 'result', resultInjuryId: 'shoulder-bursitis', content: 'Your symptoms suggest subacromial bursitis. The painful arc between 60-120° is characteristic.', detail: 'Activity modification, rotator cuff strengthening, and addressing posture. Often coexists with rotator cuff tendinopathy. Ice for acute flare-ups.' },
@@ -653,15 +653,15 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Biceps Tendinopathy Tree ════ */
   'bt-q1': { id: 'bt-q1', type: 'question', category: 'location', content: 'Is your pain at the FRONT of the shoulder, specifically in the groove where the biceps tendon runs?',
-    options: [{ label: 'Yes — front of shoulder, bicipital groove', nextNodeId: 'bt-q2' }, { label: 'No — pain elsewhere', nextNodeId: 'rc-q1' }] },
+    options: [{ label: 'Yes — front of shoulder, bicipital groove', nextNodeId: 'bt-q2', pin: { top: 52, left: 50 } }, { label: 'No — pain elsewhere', nextNodeId: 'rc-q1' }] },
   'bt-q2': { id: 'bt-q2', type: 'question', category: 'symptom', content: 'Did you feel a sudden pop with a visible bulge forming in the upper arm?',
-    options: [{ label: 'Yes — pop + Popeye deformity', nextNodeId: 'bt-referral' }, { label: 'No — gradual onset pain', nextNodeId: 'bt-result' }] },
+    options: [{ label: 'Yes — pop + Popeye deformity', nextNodeId: 'bt-referral' }, { label: 'No — gradual onset pain', nextNodeId: 'bt-result', pin: { top: 52, left: 50 } }] },
   'bt-result': { id: 'bt-result', type: 'result', resultInjuryId: 'biceps-tendinopathy', content: 'Your symptoms suggest long head of biceps tendinopathy. Anterior shoulder pain worsened by lifting and overhead activity.', detail: 'Load management, avoid heavy biceps loading, rotator cuff and scapular strengthening. Often coexists with rotator cuff pathology.' },
   'bt-referral': { id: 'bt-referral', type: 'referral', content: '⚠️ A sudden pop with visible bulge suggests biceps tendon rupture. Seek orthopaedic assessment. Surgical repair may be needed in young/active patients.' },
 
   /* ════ Olecranon Bursitis Tree ════ */
   'ob-q1': { id: 'ob-q1', type: 'question', category: 'symptom', content: 'Do you have a visible, fluid-filled swelling over the point of your elbow?',
-    options: [{ label: 'Yes — swelling over elbow tip', nextNodeId: 'ob-q2' }, { label: 'No visible swelling', nextNodeId: 'te-q1' }] },
+    options: [{ label: 'Yes — swelling over elbow tip', nextNodeId: 'ob-q2', pin: { top: 35, left: 45 } }, { label: 'No visible swelling', nextNodeId: 'te-q1' }] },
   'ob-q2': { id: 'ob-q2', type: 'question', category: 'symptom', content: 'Is the swelling red, hot, and painful with fever or chills?',
     options: [{ label: 'Yes — infection signs', nextNodeId: 'ob-emergency' }, { label: 'No — just swollen, not hot', nextNodeId: 'ob-result' }] },
   'ob-result': { id: 'ob-result', type: 'result', resultInjuryId: 'olecranon-bursitis', content: 'Your symptoms suggest olecranon bursitis — fluid accumulation over the elbow tip. Typically non-infected (aseptic).', detail: 'Protect the elbow from further irritation. Compression wrap. Avoid leaning on the elbow. Most resolve in 2-6 weeks. Aspiration only if very tense.' },
@@ -669,7 +669,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ UCL Sprain Tree ════ */
   'ucl-q1': { id: 'ucl-q1', type: 'question', category: 'mechanism', content: 'Are you a throwing athlete (baseball, cricket, javelin) with inner elbow pain during or after throwing?',
-    options: [{ label: 'Yes — medial elbow pain with throwing', nextNodeId: 'ucl-q2' }, { label: 'No — not a throwing injury', nextNodeId: 'ge-q1' }] },
+    options: [{ label: 'Yes — medial elbow pain with throwing', nextNodeId: 'ucl-q2', pin: { top: 32, left: 42 } }, { label: 'No — not a throwing injury', nextNodeId: 'ge-q1' }] },
   'ucl-q2': { id: 'ucl-q2', type: 'question', category: 'symptom', content: 'Did you feel a pop or sudden sharp pain on the inside of the elbow during a single throw?',
     options: [{ label: 'Yes — acute pop during throw', nextNodeId: 'ucl-referral' }, { label: 'Gradual onset over weeks/months', nextNodeId: 'ucl-result' }] },
   'ucl-result': { id: 'ucl-result', type: 'result', resultInjuryId: 'ucl-sprain', content: 'Your symptoms suggest UCL sprain from repetitive valgus stress. This is a chronic overuse injury of the throwing elbow.', detail: 'Rest from throwing, progressive rehabilitation, and gradual return to throwing program. Professional assessment recommended for imaging.' },
@@ -677,7 +677,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ SIJ Pain Tree ════ */
   'sij-q1': { id: 'sij-q1', type: 'question', category: 'location', content: 'Is your pain in the buttock/posterior pelvis area (below the belt line) and can you point to it with one finger?',
-    options: [{ label: 'Yes — localized buttock/posterior pelvis pain', nextNodeId: 'sij-q2' }, { label: 'No — more central or radiating', nextNodeId: 'nslbp-q1' }] },
+    options: [{ label: 'Yes — localized buttock/posterior pelvis pain', nextNodeId: 'sij-q2', pin: { top: 48, left: 50 } }, { label: 'No — more central or radiating', nextNodeId: 'nslbp-q1' }] },
   'sij-q2': { id: 'sij-q2', type: 'question', category: 'symptom', content: 'Do you have morning stiffness lasting > 30 minutes that improves with exercise?',
     options: [{ label: 'Yes — prolonged morning stiffness', nextNodeId: 'sij-referral' }, { label: 'No — stiffness < 30 min or no stiffness', nextNodeId: 'sij-result' }] },
   'sij-result': { id: 'sij-result', type: 'result', resultInjuryId: 'sij-pain', content: 'Your symptoms suggest sacroiliac joint pain. Localized buttock/posterior pelvic pain with mechanical characteristics.', detail: 'SIJ stabilization exercises (bridging, clamshells), core stability, and addressing biomechanical asymmetries. Common in runners.' },
@@ -685,7 +685,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Rib Stress Injury Tree ════ */
   'rib-q1': { id: 'rib-q1', type: 'question', category: 'symptom', content: 'Do you have chest wall/rib pain that worsens with deep breathing, coughing, or specific sport movements (rowing catch, bowling)?',
-    options: [{ label: 'Yes — activity and breathing-related rib pain', nextNodeId: 'rib-q2' }, { label: 'No — different pattern', nextNodeId: 'tp-q1' }] },
+    options: [{ label: 'Yes — activity and breathing-related rib pain', nextNodeId: 'rib-q2', pin: { top: 40, left: 42 } }, { label: 'No — different pattern', nextNodeId: 'tp-q1' }] },
   'rib-q2': { id: 'rib-q2', type: 'question', category: 'symptom', content: 'Is there any shortness of breath, chest tightness, or difficulty breathing?',
     options: [{ label: 'Yes — breathing difficulty', nextNodeId: 'rib-emergency' }, { label: 'No — pain only, breathing OK', nextNodeId: 'rib-result' }] },
   'rib-result': { id: 'rib-result', type: 'result', resultInjuryId: 'rib-stress-injury', content: 'Your symptoms suggest a rib stress injury or stress fracture. Common in rowing, cricket bowling, and sports with repetitive trunk rotation.', detail: 'Activity modification for 4-6 weeks, cross-train with non-provocative activities. Address training load and nutritional factors (energy availability).' },
@@ -706,12 +706,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ PCL Injury Tree ════ */
   'pcl-q1': { id: 'pcl-q1', type: 'question', category: 'mechanism', content: 'Did you receive a direct blow to the front of the shin/knee while the knee was bent, or fall onto a bent knee?',
-    options: [{ label: 'Yes — dashboard or fall-on-bent-knee mechanism', nextNodeId: 'pcl-result' }, { label: 'No — different mechanism', nextNodeId: 'acl-q1' }] },
+    options: [{ label: 'Yes — dashboard or fall-on-bent-knee mechanism', nextNodeId: 'pcl-result', pin: { top: 52, left: 50 } }, { label: 'No — different mechanism', nextNodeId: 'acl-q1' }] },
   'pcl-result': { id: 'pcl-result', type: 'result', resultInjuryId: 'pcl-injury', content: 'Your mechanism and symptoms suggest a PCL injury. Direct blow to the anterior tibia pushing it backward is the classic mechanism.', detail: 'Grade I-II usually managed conservatively with quadriceps strengthening. Professional assessment recommended to grade the injury and check for combined ligament damage.' },
 
   /* ════ LCL Sprain Tree ════ */
   'lcl-q1': { id: 'lcl-q1', type: 'question', category: 'mechanism', content: 'Was there a force pushing your knee outward from the inside (varus force)?',
-    options: [{ label: 'Yes — force from inside of knee', nextNodeId: 'lcl-q2' }, { label: 'No varus force', nextNodeId: 'pfps-q1' }] },
+    options: [{ label: 'Yes — force from inside of knee', nextNodeId: 'lcl-q2', pin: { top: 50, left: 38 } }, { label: 'No varus force', nextNodeId: 'pfps-q1' }] },
   'lcl-q2': { id: 'lcl-q2', type: 'question', category: 'symptom', content: 'Do you have foot drop or difficulty lifting your foot?',
     options: [{ label: 'Yes — foot drop present', nextNodeId: 'lcl-emergency' }, { label: 'No — lateral knee pain only', nextNodeId: 'lcl-result' }] },
   'lcl-result': { id: 'lcl-result', type: 'result', resultInjuryId: 'lcl-sprain', content: 'Your symptoms suggest an LCL sprain. Varus mechanism with lateral knee pain and possible instability.', detail: 'Hinged brace and progressive rehabilitation. Professional assessment recommended — isolated LCL injuries are uncommon, usually combined with posterolateral corner injury.' },
@@ -719,12 +719,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Hoffa's Fat Pad Tree ════ */
   'hfp-q1': { id: 'hfp-q1', type: 'question', category: 'symptom', content: 'Is your pain just BELOW the kneecap (not at the inferior pole) and does it WORSEN with full knee extension?',
-    options: [{ label: 'Yes — pain below kneecap, worse at full extension', nextNodeId: 'hfp-result' }, { label: 'Pain at inferior pole of patella', nextNodeId: 'ptend-q1' }] },
+    options: [{ label: 'Yes — pain below kneecap, worse at full extension', nextNodeId: 'hfp-result', pin: { top: 60, left: 50 } }, { label: 'Pain at inferior pole of patella', nextNodeId: 'ptend-q1' }] },
   'hfp-result': { id: 'hfp-result', type: 'result', resultInjuryId: 'hoffas-fat-pad', content: 'Your symptoms suggest Hoffa\'s fat pad impingement. Pain just below the kneecap that worsens with full extension is characteristic.', detail: 'Taping to offload the fat pad, avoid knee hyperextension, quadriceps strengthening (avoiding last 30° of extension). Activity modification for 4-8 weeks.' },
 
   /* ════ Exertional Compartment Syndrome Tree ════ */
   'cecs-q1': { id: 'cecs-q1', type: 'question', category: 'symptom', content: 'Does your lower leg pain start at a PREDICTABLE point during exercise (e.g., always at 15 min running) and resolve completely within 30 minutes of stopping?',
-    options: [{ label: 'Yes — predictable onset, resolves with rest', nextNodeId: 'cecs-q2' }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — predictable onset, resolves with rest', nextNodeId: 'cecs-q2', pin: { top: 30, left: 25 } }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
   'cecs-q2': { id: 'cecs-q2', type: 'question', category: 'symptom', content: 'Does the pain resolve within 30 minutes of stopping exercise?',
     options: [{ label: 'Yes — fully resolves', nextNodeId: 'cecs-result' }, { label: 'No — pain persists > 30 min after stopping', nextNodeId: 'cecs-emergency' }] },
   'cecs-result': { id: 'cecs-result', type: 'result', resultInjuryId: 'exertional-compartment', content: 'Your symptoms are classic for chronic exertional compartment syndrome. Predictable onset during exercise with complete resolution at rest is the hallmark.', detail: 'Conservative: gait retraining (forefoot striking), stretching, load management. Surgical fasciotomy is definitive if conservative measures fail. Compartment pressure testing confirms diagnosis.' },
@@ -732,12 +732,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Chronic Ankle Instability Tree ════ */
   'cai-q1': { id: 'cai-q1', type: 'question', category: 'symptom', content: 'Do you have recurrent ankle sprains or a persistent feeling of your ankle "giving way" — more than 12 months after an initial sprain?',
-    options: [{ label: 'Yes — recurrent giving way > 12 months', nextNodeId: 'cai-result' }, { label: 'Recent acute sprain', nextNodeId: 'las-q1' }] },
+    options: [{ label: 'Yes — recurrent giving way > 12 months', nextNodeId: 'cai-result', pin: { top: 46, left: 32 } }, { label: 'Recent acute sprain', nextNodeId: 'las-q1' }] },
   'cai-result': { id: 'cai-result', type: 'result', resultInjuryId: 'chronic-ankle-instability', content: 'Your symptoms are consistent with chronic ankle instability (CAI). This develops in up to 40% of people after ankle sprains due to both mechanical and neuromuscular deficits.', detail: 'Structured balance and proprioception training (8-12 weeks). Peroneal strengthening. Consider external ankle support (brace) for sport. Surgery only if structured rehab fails.' },
 
   /* ════ Achilles Rupture Tree ════ */
   'ar-q1': { id: 'ar-q1', type: 'question', category: 'mechanism', content: 'Did you feel a sudden "pop" or sensation of being kicked in the back of the calf during a push-off or sprint?',
-    options: [{ label: 'Yes — sudden pop/kicked sensation', nextNodeId: 'ar-q2' }, { label: 'Gradual onset Achilles pain', nextNodeId: 'at-q1' }] },
+    options: [{ label: 'Yes — sudden pop/kicked sensation', nextNodeId: 'ar-q2', pin: { top: 55, left: 28 } }, { label: 'Gradual onset Achilles pain', nextNodeId: 'at-q1' }] },
   'ar-q2': { id: 'ar-q2', type: 'question', category: 'symptom', content: 'Can you do a single-leg heel raise on the affected side? (Try it carefully.)',
     options: [{ label: 'No — unable to push up on toes at all', nextNodeId: 'ar-referral' }, { label: 'Yes — can still raise heel', nextNodeId: 'cs-q1' }] },
   'ar-referral': { id: 'ar-referral', type: 'referral', content: '⚠️ Sudden pop + inability to perform heel raise strongly suggests Achilles tendon rupture. Seek URGENT orthopaedic assessment within 24-48 hours for best outcomes. Do NOT weight-bear normally — use crutches.' },
@@ -772,12 +772,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Cervical Sprain Tree ════ */
   'csp-q1': { id: 'csp-q1', type: 'question', category: 'symptom', content: 'Do you have neck pain/stiffness after a sport-related mechanism WITHOUT numbness, tingling, or arm weakness?',
-    options: [{ label: 'Yes — neck pain only, no arm symptoms', nextNodeId: 'csp-result' }, { label: 'Arm symptoms present', nextNodeId: 'cr-q1' }] },
+    options: [{ label: 'Yes — neck pain only, no arm symptoms', nextNodeId: 'csp-result', pin: { top: 65, left: 50 } }, { label: 'Arm symptoms present', nextNodeId: 'cr-q1' }] },
   'csp-result': { id: 'csp-result', type: 'result', resultInjuryId: 'cervical-sprain', content: 'Your symptoms suggest a cervical sprain/strain — muscular or ligamentous neck injury without neurological involvement.', detail: 'Stay active within pain limits. Gentle ROM exercises, heat, and progressive neck strengthening. Most resolve in 1-4 weeks.' },
 
   /* ════ Lumbar Muscle Strain Tree ════ */
   'lms-q1': { id: 'lms-q1', type: 'question', category: 'symptom', content: 'Do you have low back pain/spasm after sudden loading or twisting WITHOUT leg pain below the knee?',
-    options: [{ label: 'Yes — local back pain/spasm only', nextNodeId: 'lms-result' }, { label: 'Leg pain below knee present', nextNodeId: 'ld-q1' }] },
+    options: [{ label: 'Yes — local back pain/spasm only', nextNodeId: 'lms-result', pin: { top: 60, left: 50 } }, { label: 'Leg pain below knee present', nextNodeId: 'ld-q1' }] },
   'lms-result': { id: 'lms-result', type: 'result', resultInjuryId: 'lumbar-muscle-strain', content: 'Your symptoms suggest an acute lumbar muscle strain. Local back pain and spasm without radiculopathy.', detail: 'STAY ACTIVE — bed rest worsens outcomes. Gentle walking, heat, gradual return to activity. Most resolve within 2-6 weeks.' },
 
   /* ════ Scapular Dyskinesis Tree ════ */
@@ -787,7 +787,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Capitellar OCD Tree ════ */
   'cocd-q1': { id: 'cocd-q1', type: 'question', category: 'symptom', content: 'Are you a young athlete (12-16) with LATERAL elbow pain during throwing or gymnastics?',
-    options: [{ label: 'Yes — adolescent with lateral elbow pain', nextNodeId: 'cocd-q2' }, { label: 'No — adult or medial pain', nextNodeId: 'te-q1' }] },
+    options: [{ label: 'Yes — adolescent with lateral elbow pain', nextNodeId: 'cocd-q2', pin: { top: 32, left: 48 } }, { label: 'No — adult or medial pain', nextNodeId: 'te-q1' }] },
   'cocd-q2': { id: 'cocd-q2', type: 'question', category: 'symptom', content: 'Does your elbow lock, catch, or fail to fully straighten?',
     options: [{ label: 'Yes — locking/catching', nextNodeId: 'cocd-referral' }, { label: 'No — pain only', nextNodeId: 'cocd-result' }] },
   'cocd-result': { id: 'cocd-result', type: 'result', resultInjuryId: 'capitellar-ocd', content: 'Your symptoms suggest capitellar OCD. Lateral elbow pain in a young thrower/gymnast is the hallmark.', detail: 'Complete rest from throwing for 3-6 months. Imaging (MRI) recommended to stage the lesion. Early detection = better outcomes.' },
@@ -795,7 +795,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Skier's Thumb Tree ════ */
   'skt-q1': { id: 'skt-q1', type: 'question', category: 'mechanism', content: 'Did you injure your thumb from a forced outward bending (abduction), such as falling on a ski pole or catching a ball awkwardly?',
-    options: [{ label: 'Yes — forced thumb abduction', nextNodeId: 'skt-q2' }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — forced thumb abduction', nextNodeId: 'skt-q2', pin: { top: 72, left: 42 } }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
   'skt-q2': { id: 'skt-q2', type: 'question', category: 'symptom', content: 'Is the thumb completely unstable — can you feel it "opening up" with no firm endpoint when stressed?',
     options: [{ label: 'Yes — no firm endpoint', nextNodeId: 'skt-referral' }, { label: 'Sore but stable', nextNodeId: 'skt-result' }] },
   'skt-result': { id: 'skt-result', type: 'result', resultInjuryId: 'skiers-thumb', content: 'Your symptoms suggest a partial thumb UCL sprain. Thumb is sore but has a stable endpoint.', detail: 'Thumb spica splint for 4-6 weeks. Protect from further abduction stress. Should heal with conservative management.' },
@@ -803,12 +803,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Mallet Finger Tree ════ */
   'mf-q1': { id: 'mf-q1', type: 'question', category: 'symptom', content: 'Is the tip of your finger drooping and you cannot actively straighten the last joint (DIP)?',
-    options: [{ label: 'Yes — fingertip droops, can\'t straighten DIP', nextNodeId: 'mf-result' }, { label: 'No droop', nextNodeId: 'hf-q1' }] },
+    options: [{ label: 'Yes — fingertip droops, can\'t straighten DIP', nextNodeId: 'mf-result', pin: { top: 82, left: 60 } }, { label: 'No droop', nextNodeId: 'hf-q1' }] },
   'mf-result': { id: 'mf-result', type: 'result', resultInjuryId: 'mallet-finger', content: 'Your symptoms indicate a mallet finger — rupture of the extensor tendon at the fingertip.', detail: 'CONTINUOUS splinting in extension for 6-8 weeks. The DIP joint must NEVER flex during this period — even briefly removing the splint resets healing. Get an X-ray to check for bony avulsion.' },
 
   /* ════ Hand Fracture/Dislocation Tree ════ */
   'hf-q1': { id: 'hf-q1', type: 'question', category: 'mechanism', content: 'Did you injure your hand from a direct blow, punch, ball impact, or fall — with visible swelling or deformity?',
-    options: [{ label: 'Yes — trauma with swelling/deformity', nextNodeId: 'hf-q2' }, { label: 'No direct trauma', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — trauma with swelling/deformity', nextNodeId: 'hf-q2', pin: { top: 76, left: 52 } }, { label: 'No direct trauma', nextNodeId: 'no-match' }] },
   'hf-q2': { id: 'hf-q2', type: 'question', category: 'symptom', content: 'When you make a fist, does any finger cross over or scissor on its neighbor?',
     options: [{ label: 'Yes — rotational deformity', nextNodeId: 'hf-referral' }, { label: 'No rotation — swollen but aligned', nextNodeId: 'hf-result' }] },
   'hf-result': { id: 'hf-result', type: 'result', resultInjuryId: 'hand-fracture', content: 'Your symptoms suggest a hand fracture or PIP dislocation. Non-rotated, stable fractures often heal with buddy taping.', detail: 'Get an X-ray to confirm. Buddy tape to adjacent finger, early motion within 1-2 weeks. 4-6 weeks total healing.' },
@@ -821,24 +821,24 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Snapping Hip Tree ════ */
   'shp-q1': { id: 'shp-q1', type: 'question', category: 'symptom', content: 'Do you hear or feel a snap/click in your hip during movement, particularly hip flexion-extension?',
-    options: [{ label: 'Yes — audible/palpable snapping', nextNodeId: 'shp-result' }, { label: 'No snapping', nextNodeId: 'fai-q1' }] },
+    options: [{ label: 'Yes — audible/palpable snapping', nextNodeId: 'shp-result', pin: { top: 50, left: 30 } }, { label: 'No snapping', nextNodeId: 'fai-q1' }] },
   'shp-result': { id: 'shp-result', type: 'result', resultInjuryId: 'snapping-hip', content: 'Your symptoms suggest snapping hip syndrome. This is usually benign but can become painful with overuse.', detail: 'ITB and hip flexor stretching, hip stabilization exercises. If painless, no treatment is required. Painful snapping responds to targeted stretching and load management.' },
 
   /* ════ Piriformis Syndrome Tree ════ */
   'pir-q1': { id: 'pir-q1', type: 'question', category: 'location', content: 'Is your pain deep in the BUTTOCK with possible sciatic-type pain down the back of the leg, but NO true low back pain?',
-    options: [{ label: 'Yes — deep buttock pain, no low back pain', nextNodeId: 'pir-q2' }, { label: 'Low back pain present too', nextNodeId: 'ld-q1' }] },
+    options: [{ label: 'Yes — deep buttock pain, no low back pain', nextNodeId: 'pir-q2', pin: { top: 52, left: 48 } }, { label: 'Low back pain present too', nextNodeId: 'ld-q1' }] },
   'pir-q2': { id: 'pir-q2', type: 'question', category: 'symptom', content: 'Does the pain worsen with prolonged sitting and improve with walking?',
     options: [{ label: 'Yes — worse sitting, better walking', nextNodeId: 'pir-result' }, { label: 'Different pattern', nextNodeId: 'sij-q1' }] },
   'pir-result': { id: 'pir-result', type: 'result', resultInjuryId: 'piriformis-syndrome', content: 'Your symptoms suggest piriformis syndrome — sciatic nerve irritation by the piriformis muscle.', detail: 'Piriformis stretching (figure-4 stretch), hip external rotator strengthening, avoid prolonged sitting. Diagnosis of exclusion — lumbar spine pathology must be ruled out first.' },
 
   /* ════ Apophyseal Avulsion Tree ════ */
   'aa-q1': { id: 'aa-q1', type: 'question', category: 'mechanism', content: 'Are you a young athlete (14-18) who felt a sudden pop in the pelvis/hip area during sprinting, kicking, or jumping?',
-    options: [{ label: 'Yes — adolescent with acute pop during explosive movement', nextNodeId: 'aa-referral' }, { label: 'No — gradual onset or adult', nextNodeId: 'gtps-q1' }] },
+    options: [{ label: 'Yes — adolescent with acute pop during explosive movement', nextNodeId: 'aa-referral', pin: { top: 40, left: 50 } }, { label: 'No — gradual onset or adult', nextNodeId: 'gtps-q1' }] },
   'aa-referral': { id: 'aa-referral', type: 'referral', content: '⚠️ Sudden pop in the pelvis during explosive sport in a young athlete suggests pelvic apophyseal avulsion. X-ray is essential to assess displacement. Most heal with 6-12 weeks rest, but displaced fragments (>2cm) may need surgery.' },
 
   /* ════ Hip Pointer Tree ════ */
   'hp-q1': { id: 'hp-q1', type: 'question', category: 'mechanism', content: 'Did you receive a direct blow to the bony prominence on the side of your pelvis (iliac crest) during a collision or fall?',
-    options: [{ label: 'Yes — direct blow to iliac crest', nextNodeId: 'hp-result' }, { label: 'No direct blow', nextNodeId: 'gtps-q1' }] },
+    options: [{ label: 'Yes — direct blow to iliac crest', nextNodeId: 'hp-result', pin: { top: 38, left: 35 } }, { label: 'No direct blow', nextNodeId: 'gtps-q1' }] },
   'hp-result': { id: 'hp-result', type: 'result', resultInjuryId: 'hip-pointer', content: 'Your symptoms suggest a hip pointer — contusion to the iliac crest. Very painful but typically heals well.', detail: 'Ice, compression, and protection. Progressive return to sport with padding. Most resolve in 1-4 weeks.' },
 
   /* ════ Pes Anserine Tree ════ */
@@ -848,7 +848,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Prepatellar Bursitis Tree ════ */
   'ppb-q1': { id: 'ppb-q1', type: 'question', category: 'symptom', content: 'Do you have swelling directly OVER the front of the kneecap (not inside the joint) after direct trauma or kneeling?',
-    options: [{ label: 'Yes — superficial swelling over patella', nextNodeId: 'ppb-q2' }, { label: 'Swelling inside the joint', nextNodeId: 'acl-q1' }] },
+    options: [{ label: 'Yes — superficial swelling over patella', nextNodeId: 'ppb-q2', pin: { top: 50, left: 50 } }, { label: 'Swelling inside the joint', nextNodeId: 'acl-q1' }] },
   'ppb-q2': { id: 'ppb-q2', type: 'question', category: 'symptom', content: 'Is it red, hot, and painful with fever?',
     options: [{ label: 'Yes — infection signs', nextNodeId: 'ppb-emergency' }, { label: 'No — just swollen', nextNodeId: 'ppb-result' }] },
   'ppb-result': { id: 'ppb-result', type: 'result', resultInjuryId: 'prepatellar-bursitis', content: 'Your symptoms suggest prepatellar bursitis. Superficial swelling over the kneecap from trauma or kneeling.', detail: 'Protect from further trauma, compression, avoid kneeling. Knee pads for sport. Most resolve in 2-6 weeks.' },
@@ -861,12 +861,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Turf Toe Tree ════ */
   'tt-q1': { id: 'tt-q1', type: 'question', category: 'mechanism', content: 'Did you forcefully hyperextend (bend back) your big toe during push-off, especially on artificial turf?',
-    options: [{ label: 'Yes — forced big toe hyperextension', nextNodeId: 'tt-result' }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — forced big toe hyperextension', nextNodeId: 'tt-result', pin: { top: 66, left: 75 } }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
   'tt-result': { id: 'tt-result', type: 'result', resultInjuryId: 'turf-toe', content: 'Your symptoms suggest turf toe — sprain of the 1st MTP joint plantar plate from forced dorsiflexion.', detail: 'Stiff-soled shoe or turf toe insert to limit big toe extension. Buddy tape. Grade I: 1-2 weeks, Grade II: 2-4 weeks, Grade III: may need 6-12 weeks or surgery.' },
 
   /* ════ Lisfranc Tree ════ */
   'lisf-q1': { id: 'lisf-q1', type: 'question', category: 'symptom', content: 'Do you have midfoot pain with bruising on the SOLE of your foot after a twisting or crush injury?',
-    options: [{ label: 'Yes — midfoot pain + plantar bruising', nextNodeId: 'lisf-referral' }, { label: 'Midfoot pain without plantar bruising', nextNodeId: 'lisf-q2' }] },
+    options: [{ label: 'Yes — midfoot pain + plantar bruising', nextNodeId: 'lisf-referral', pin: { top: 58, left: 52 } }, { label: 'Midfoot pain without plantar bruising', nextNodeId: 'lisf-q2' }] },
   'lisf-q2': { id: 'lisf-q2', type: 'question', category: 'symptom', content: 'Can you bear weight on the midfoot? Does single-leg heel raise cause midfoot pain?',
     options: [{ label: 'Cannot weight-bear on midfoot', nextNodeId: 'lisf-referral' }, { label: 'Can weight-bear but sore', nextNodeId: 'lisf-result' }] },
   'lisf-result': { id: 'lisf-result', type: 'result', resultInjuryId: 'lisfranc-injury', content: 'Your symptoms suggest a possible Lisfranc midfoot injury. This is commonly missed — get imaging (weight-bearing X-rays).', detail: 'Non-weight-bearing for 6-8 weeks if non-displaced. Professional assessment is essential — missed Lisfranc injuries lead to chronic midfoot arthritis.' },
@@ -874,7 +874,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Sever's Disease Tree ════ */
   'sev-q1': { id: 'sev-q1', type: 'question', category: 'symptom', content: 'Is this heel pain in a child aged 8-14 that worsens during/after sport and improves with rest?',
-    options: [{ label: 'Yes — active child with heel pain', nextNodeId: 'sev-result' }, { label: 'No — adult or atypical', nextNodeId: 'pf-q1' }] },
+    options: [{ label: 'Yes — active child with heel pain', nextNodeId: 'sev-result', pin: { top: 60, left: 28 } }, { label: 'No — adult or atypical', nextNodeId: 'pf-q1' }] },
   'sev-result': { id: 'sev-result', type: 'result', resultInjuryId: 'severs-disease', content: 'Your symptoms are consistent with Sever\'s disease — calcaneal apophysitis in a growing child. Self-limiting condition.', detail: 'Heel raises in shoes, calf stretching, activity modification (not complete rest). Resolves with skeletal maturity. Ice after sport for symptom management.' },
 
   /* ════ Posterior Ankle Impingement Tree ════ */
@@ -884,7 +884,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Morton's Neuroma Tree ════ */
   'mn-q1': { id: 'mn-q1', type: 'question', category: 'symptom', content: 'Do you have burning pain or numbness in the ball of your foot, especially between the 3rd and 4th toes, feeling like "standing on a pebble"?',
-    options: [{ label: 'Yes — burning/numbness between toes', nextNodeId: 'mn-result' }, { label: 'Different foot pain', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — burning/numbness between toes', nextNodeId: 'mn-result', pin: { top: 68, left: 68 } }, { label: 'Different foot pain', nextNodeId: 'no-match' }] },
   'mn-result': { id: 'mn-result', type: 'result', resultInjuryId: 'mortons-neuroma', content: 'Your symptoms suggest Morton\'s neuroma — interdigital nerve irritation in the forefoot.', detail: 'Wide toe box footwear (most important), metatarsal pad to offload the nerve, avoid tight shoes. If conservative measures fail: corticosteroid injection or surgical excision.' },
 
   /* ════ No Match Node ════ */

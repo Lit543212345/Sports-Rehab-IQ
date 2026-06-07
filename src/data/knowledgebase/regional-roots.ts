@@ -211,9 +211,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your lower back pain?',
     options: [
-      { label: 'General ache or pain in the lower back without nerve symptoms', nextNodeId: 'nslbp-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 45, left: 50, zoom: 2.5 } },
-      { label: 'Acute lower back pain after a sudden lift, twist, or strain', nextNodeId: 'lms-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 45, left: 50, zoom: 2.5 } },
-      { label: 'Lower back pain worsened by arching backwards, common in young athletes', nextNodeId: 'spon-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 45, left: 50, zoom: 2.5 } },
+      { label: 'General ache or pain in the lower back without nerve symptoms', nextNodeId: 'nslbp-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 60, left: 50, zoom: 3.0 } },
+      { label: 'Acute lower back pain after a sudden lift, twist, or strain', nextNodeId: 'lms-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 60, left: 50, zoom: 3.0 } },
+      { label: 'Lower back pain worsened by arching backwards, common in young athletes', nextNodeId: 'spon-q1', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 60, left: 50, zoom: 3.0 } },
     ]
   },
   {
@@ -222,7 +222,7 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your pelvic pain?',
     options: [
-      { label: 'Pain around the dimples of the lower back/pelvis, sometimes referring to the thigh', nextNodeId: 'sij-q1', highlightMuscles: ['lower-back', 'gluteal'], modelType: 'posterior', pin: { top: 48, left: 50, zoom: 3.5 } },
+      { label: 'Pain around the dimples of the lower back/pelvis, sometimes referring to the thigh', nextNodeId: 'sij-q1', highlightMuscles: ['lower-back', 'gluteal'], modelType: 'posterior', pin: { top: 68, left: 50, zoom: 3.0 } },
     ]
   },
   {
@@ -353,8 +353,8 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is the primary symptom or cause?',
     options: [
-      { label: 'Headache, dizziness, or head impact', nextNodeId: 'hn-head', highlightMuscles: ['neck'], pin: { top: 10, left: 50, zoom: 3.5 } },
-      { label: 'Neck pain', nextNodeId: 'hn-neck', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
+      { label: 'Headache, dizziness, or head impact', nextNodeId: 'hn-head', highlightMuscles: ['neck'], pin: { top: 25, left: 50, zoom: 3.5 } },
+      { label: 'Neck pain', nextNodeId: 'hn-neck', highlightMuscles: ['neck'], pin: { top: 65, left: 50, zoom: 3.5 } },
     ]
   },
   {
@@ -363,7 +363,7 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your head symptom?',
     options: [
-      { label: 'Headache, dizziness, or confusion after a hit to the head or body', nextNodeId: 'conc-q1', highlightMuscles: ['neck'], pin: { top: 10, left: 50, zoom: 3.5 } },
+      { label: 'Headache, dizziness, or confusion after a hit to the head or body', nextNodeId: 'conc-q1', highlightMuscles: ['neck'], pin: { top: 25, left: 50, zoom: 3.5 } },
     ]
   },
   {
@@ -372,10 +372,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your neck pain?',
     options: [
-      { label: 'Neck pain and stiffness after a whiplash injury (e.g., tackle, collision)', nextNodeId: 'wad-q1', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
-      { label: 'Acute neck muscle strain or stiffness', nextNodeId: 'csp-q1', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
-      { label: 'Neck pain with numbness, tingling, or weakness shooting down the arm', nextNodeId: 'cr-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50 } },
-      { label: 'Sudden, intense burning or electric shock feeling down the arm after a tackle', nextNodeId: 'sb-q1', highlightMuscles: ['neck'], pin: { top: 18, left: 50, zoom: 3.5 } },
+      { label: 'Neck pain and stiffness after a whiplash injury (e.g., tackle, collision)', nextNodeId: 'wad-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50, zoom: 3.5 } },
+      { label: 'Acute neck muscle strain or stiffness', nextNodeId: 'csp-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50, zoom: 3.5 } },
+      { label: 'Neck pain with numbness, tingling, or weakness shooting down the arm', nextNodeId: 'cr-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50, zoom: 3.5 } },
+      { label: 'Sudden, intense burning or electric shock feeling down the arm after a tackle', nextNodeId: 'sb-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50, zoom: 3.5 } },
     ]
   },
 

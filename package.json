@@ -15,6 +15,8 @@
     "dexie": "^4.4.2",
     "dexie-react-hooks": "^4.4.0",
     "framer-motion": "^12.39.0",
+    "jsdom": "^29.1.1",
+    "puppeteer": "^25.1.0",
     "react": "^19.2.6",
     "react-body-highlighter": "^2.0.5",
     "react-dom": "^19.2.6",

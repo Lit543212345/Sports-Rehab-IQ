@@ -97,6 +97,10 @@ export interface DiagnosticOption {
   nextNodeId: string;
   /** Optional icon hint */
   icon?: string;
+  /** Optional array of muscles to highlight on a mini diagram */
+  highlightMuscles?: string[];
+  /** Which side of the body to show for the diagram */
+  modelType?: 'anterior' | 'posterior';
 }
 
 /** User's answer to a diagnostic question */

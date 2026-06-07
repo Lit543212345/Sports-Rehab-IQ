@@ -4,6 +4,7 @@
  */
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Model from 'react-body-highlighter';
 import type { BodyRegion, DiagnosticNode, DiagnosticAnswer } from '../../data/knowledgebase/types';
 import { getDiagnosticNode } from '../../data/knowledgebase';
 import { getStartNode, recordAnswer, resolveResult } from '../../engine/diagnostic-matcher';
@@ -122,7 +123,18 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                     transition={{ delay: i * 0.08 }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    {option.label}
+                    {option.highlightMuscles && (
+                      <div className="guided-discovery__option-diagram">
+                        <Model
+                          type={option.modelType || 'anterior'}
+                          data={[{ name: 'Highlight', muscles: option.highlightMuscles }]}
+                          bodyColor="var(--color-bg-secondary)"
+                          highlightedColors={['var(--color-accent)']}
+                          style={{ width: '40px', height: '80px' }}
+                        />
+                      </div>
+                    )}
+                    <span className="guided-discovery__option-label">{option.label}</span>
                   </motion.button>
                 ))}
               </div>

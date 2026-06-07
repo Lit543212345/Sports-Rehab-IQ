@@ -150,9 +150,11 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                             left: '50%',
                             top: '50%',
                             transformOrigin: option.pin ? `${option.pin.left}% ${option.pin.top}%` : '50% 50%',
-                            transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin?.zoom || (option.pin ? 3.0 : 1.0)})`,
-                            width: '56px',
-                            height: '56px',
+                            transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin ? (option.pin.zoom ? option.pin.zoom * 0.5 : 1.5) : 1.0})`,
+
+                            width: '112px',
+                            height: '112px',
+
                           }}
                         >
                           <img 

@@ -65,13 +65,14 @@
 
 .guided-discovery__option-diagram {
   position: relative;
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
+  width: 112px;
+  height: 112px;
+  min-width: 112px;
   border-radius: 50%;
   overflow: hidden;
   background-color: var(--color-bg-secondary);
   border: 2px solid var(--color-border);
+
   display: flex;
   align-items: center;
   justify-content: center;

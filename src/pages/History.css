@@ -102,3 +102,99 @@
   font-size: var(--text-xs);
   color: var(--color-text-tertiary);
 }
+
+.history__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.history__section-header .history__section-title {
+  margin-bottom: 0;
+}
+
+.history__section-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.history__btn {
+  padding: var(--space-1-5) var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-xs);
+  transition: all var(--duration-fast) var(--ease-out);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  cursor: pointer;
+}
+
+.history__btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-text-secondary);
+}
+
+.history__btn--danger {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ff4d4d;
+}
+
+.history__btn--danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ff4d4d;
+}
+
+.history__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.history__session-card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.history__checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  user-select: none;
+}
+
+.history__checkbox-container--checked {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.history__checkbox-icon {
+  color: var(--color-text-inverse);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.history__session-card-selectable {
+  flex: 1;
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.history__session-card-selectable--selected {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 8px rgba(0, 212, 170, 0.15);
+}
+

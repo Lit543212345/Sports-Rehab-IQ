@@ -15,6 +15,14 @@ export function History() {
   const navigate = useNavigate();
   const [plans, setPlans] = useState<ActiveTreatmentPlan[]>([]);
   const [sessions, setSessions] = useState<DiagnosisSession[]>([]);
+  const [isSelectMode, setIsSelectMode] = useState(false);
+  const [selectedSessionIds, setSelectedSessionIds] = useState<Set<number>>(new Set());
+
+  const refreshSessions = () => {
+    db.sessions.orderBy('createdAt').reverse().toArray()
+      .then(setSessions)
+      .catch(() => setSessions([]));
+  };
 
   useEffect(() => {
     // Fetch all treatment plans, order by most recent startedAt
@@ -22,11 +30,38 @@ export function History() {
       .then(setPlans)
       .catch(() => setPlans([]));
 
-    // Fetch all diagnosis sessions, order by most recent createdAt
-    db.sessions.orderBy('createdAt').reverse().toArray()
-      .then(setSessions)
-      .catch(() => setSessions([]));
+    refreshSessions();
   }, []);
+
+  const toggleSelectMode = () => {
+    setIsSelectMode(!isSelectMode);
+    setSelectedSessionIds(new Set());
+  };
+
+  const toggleSelectSession = (id: number) => {
+    const next = new Set(selectedSessionIds);
+    if (next.has(id)) {
+      next.delete(id);
+    } else {
+      next.add(id);
+    }
+    setSelectedSessionIds(next);
+  };
+
+  const handleClearSelected = async () => {
+    if (selectedSessionIds.size === 0) return;
+    const confirmDelete = window.confirm(`Are you sure you want to delete the ${selectedSessionIds.size} selected diagnosis session(s)?`);
+    if (!confirmDelete) return;
+
+    try {
+      await db.sessions.bulkDelete(Array.from(selectedSessionIds));
+      setSelectedSessionIds(new Set());
+      setIsSelectMode(false);
+      refreshSessions();
+    } catch (err) {
+      console.error('Failed to delete selected sessions:', err);
+    }
+  };
 
   const regions = getBodyRegions();
   const getRegionLabel = (regionId: string) => {
@@ -87,9 +122,39 @@ export function History() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        <h2 className="history__section-title">
-          <span>🔍</span> Past Diagnoses
-        </h2>
+        <div className="history__section-header">
+          <h2 className="history__section-title">
+            <span>🔍</span> Past Diagnoses
+          </h2>
+          {sessions.length > 0 && (
+            <div className="history__section-actions">
+              {isSelectMode ? (
+                <>
+                  <button 
+                    className="history__btn" 
+                    onClick={toggleSelectMode}
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    className="history__btn history__btn--danger" 
+                    disabled={selectedSessionIds.size === 0}
+                    onClick={handleClearSelected}
+                  >
+                    Delete Selected ({selectedSessionIds.size})
+                  </button>
+                </>
+              ) : (
+                <button 
+                  className="history__btn" 
+                  onClick={toggleSelectMode}
+                >
+                  Select
+                </button>
+              )}
+            </div>
+          )}
+        </div>
         
         {sessions.length === 0 ? (
           <div className="history__empty">
@@ -104,18 +169,32 @@ export function History() {
                 : session.matchedInjuryId 
                   ? 'Condition identified' 
                   : 'No definitive match';
+              const isSelected = selectedSessionIds.has(session.id!);
 
               return (
-                <GlassCard key={session.id}>
-                  <h3 className="history__session-name">{resultText}</h3>
-                  <p className="history__session-region">{getRegionLabel(session.region)}</p>
-                  <p className="history__session-date">
-                    {new Date(session.createdAt).toLocaleString(undefined, { 
-                      dateStyle: 'medium', 
-                      timeStyle: 'short' 
-                    })}
-                  </p>
-                </GlassCard>
+                <div key={session.id} className="history__session-card-wrapper">
+                  {isSelectMode && (
+                    <div 
+                      className={`history__checkbox-container ${isSelected ? 'history__checkbox-container--checked' : ''}`}
+                      onClick={() => toggleSelectSession(session.id!)}
+                    >
+                      {isSelected && <span className="history__checkbox-icon">✓</span>}
+                    </div>
+                  )}
+                  <GlassCard 
+                    className={isSelectMode ? `history__session-card-selectable ${isSelected ? 'history__session-card-selectable--selected' : ''}` : ''} 
+                    onClick={isSelectMode ? () => toggleSelectSession(session.id!) : undefined}
+                  >
+                    <h3 className="history__session-name">{resultText}</h3>
+                    <p className="history__session-region">{getRegionLabel(session.region)}</p>
+                    <p className="history__session-date">
+                      {new Date(session.createdAt).toLocaleString(undefined, { 
+                        dateStyle: 'medium', 
+                        timeStyle: 'short' 
+                      })}
+                    </p>
+                  </GlassCard>
+                </div>
               );
             })}
           </div>

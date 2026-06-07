@@ -4,15 +4,31 @@
  */
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Model from 'react-body-highlighter';
-import type { Muscle } from 'react-body-highlighter';
 import type { BodyRegion, DiagnosticNode, DiagnosticAnswer } from '../../data/knowledgebase/types';
 import { getDiagnosticNode } from '../../data/knowledgebase';
 import { getStartNode, recordAnswer, resolveResult } from '../../engine/diagnostic-matcher';
 import type { KnowledgebaseQueryResult } from '../../data/knowledgebase/types';
 import { GlassCard } from '../shared/GlassCard';
-import { REGION_TO_MUSCLES } from '../BodyMap/BodyMap';
 import './GuidedDiscovery.css';
+
+// Import regional anatomical diagrams
+import diagramHeadNeck from '../../assets/diagram_head_neck.png';
+import diagramShoulder from '../../assets/diagram_shoulder.png';
+import diagramElbowWristHand from '../../assets/diagram_elbow_wrist_hand.png';
+import diagramSpine from '../../assets/diagram_spine.png';
+import diagramHipPelvis from '../../assets/diagram_hip_pelvis.png';
+import diagramKnee from '../../assets/diagram_knee.png';
+import diagramFootAnkle from '../../assets/diagram_foot_ankle.png';
+
+const REGION_DIAGRAMS: Record<Exclude<BodyRegion, 'systemic'>, string> = {
+  'head-neck': diagramHeadNeck,
+  'shoulder': diagramShoulder,
+  'elbow-wrist-hand': diagramElbowWristHand,
+  'spine': diagramSpine,
+  'hip-pelvis-groin': diagramHipPelvis,
+  'knee-thigh': diagramKnee,
+  'lower-leg-ankle-foot': diagramFootAnkle,
+};
 
 interface GuidedDiscoveryProps {
   region: BodyRegion;
@@ -24,6 +40,7 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
   const [currentNode, setCurrentNode] = useState<DiagnosticNode | null>(() => getStartNode(region));
   const [answers, setAnswers] = useState<DiagnosticAnswer[]>([]);
   const [direction, setDirection] = useState(1);
+  const diagramUrl = region !== 'systemic' ? REGION_DIAGRAMS[region] : null;
 
   const handleOptionSelect = useCallback((optionIndex: number) => {
     if (!currentNode || !currentNode.options) return;
@@ -126,26 +143,24 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                     whileTap={{ scale: 0.97 }}
                   >
                     <div className="guided-discovery__option-diagram">
-                      {option.pin && <div className="guided-discovery__pin" />}
-                      <div 
-                        className="guided-discovery__model-wrapper"
-                        style={{
-                          left: '50%',
-                          top: '50%',
-                          transformOrigin: option.pin ? `${option.pin.left}% ${option.pin.top}%` : '50% 50%',
-                          transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin?.zoom || (option.pin ? 3.5 : 0.75)})`,
-                          width: '40px',
-                          height: '80px',
-                        }}
-                      >
-                        <Model
-                          type={option.modelType || 'anterior'}
-                          data={[{ name: 'Highlight', muscles: (option.highlightMuscles || REGION_TO_MUSCLES[region] || []) as Muscle[] }]}
-                          bodyColor="var(--color-bg-secondary)"
-                          highlightedColors={['var(--color-accent)']}
-                          style={{ width: '100%', height: '100%' }}
+                      {diagramUrl ? (
+                        <img 
+                          src={diagramUrl} 
+                          alt={region} 
+                          className="guided-discovery__region-diagram-img"
                         />
-                      </div>
+                      ) : (
+                        <div className="guided-discovery__systemic-placeholder">🌐</div>
+                      )}
+                      {option.pin && (
+                        <div 
+                          className="guided-discovery__pin" 
+                          style={{
+                            left: `${option.pin.left}%`,
+                            top: `${option.pin.top}%`
+                          }}
+                        />
+                      )}
                     </div>
                     <span className="guided-discovery__option-label">{option.label}</span>
                   </motion.button>

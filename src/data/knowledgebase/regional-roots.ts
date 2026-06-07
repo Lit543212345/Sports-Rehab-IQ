@@ -75,9 +75,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is the pain or primary symptom?',
     options: [
-      { label: 'Inside or deep within the knee', nextNodeId: 'kt-deep', highlightMuscles: ['knees'], pin: { top: 50, left: 50, zoom: 3.5 } },
+      { label: 'Inside or deep within the knee', nextNodeId: 'kt-deep', highlightMuscles: ['knees'], pin: { top: 46, left: 50 } },
       { label: 'Front of the knee / Kneecap', nextNodeId: 'kt-front', highlightMuscles: ['knees'], pin: { top: 50, left: 50, zoom: 3.5 } },
-      { label: 'Side or back of thigh/knee', nextNodeId: 'kt-thigh', highlightMuscles: ['hamstring'], modelType: 'posterior', pin: { top: 40, left: 50, zoom: 2.5 } },
+      { label: 'Side or back of thigh/knee', nextNodeId: 'kt-thigh', highlightMuscles: ['hamstring'], pin: { top: 20, left: 50 } },
     ]
   },
   {
@@ -86,9 +86,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your deep/inner knee symptom?',
     options: [
-      { label: 'Knee pain/instability after a twisting or pivoting injury', nextNodeId: 'acl-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
-      { label: 'Knee pain after force to the outside of the knee (buckling inward)', nextNodeId: 'mcl-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 55, zoom: 3.5 } },
-      { label: 'Knee pain after force to the inside of the knee (buckling outward)', nextNodeId: 'lcl-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 45, zoom: 3.5 } },
+      { label: 'Knee pain/instability after a twisting or pivoting injury', nextNodeId: 'acl-q1', highlightMuscles: ['knees'], pin: { top: 50, left: 50 } },
+      { label: 'Knee pain after force to the outside of the knee (buckling inward)', nextNodeId: 'mcl-q1', highlightMuscles: ['knees'], pin: { top: 50, left: 65 } },
+      { label: 'Knee pain after force to the inside of the knee (buckling outward)', nextNodeId: 'lcl-q1', highlightMuscles: ['knees'], pin: { top: 50, left: 35 } },
       { label: 'Knee pain after a direct blow to the front of the shin/dashboard injury', nextNodeId: 'pcl-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
       { label: 'Catching, locking, or clicking in the knee after a twisting motion', nextNodeId: 'men-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
       { label: 'Gradual onset of widespread knee stiffness and aching (common in older adults)', nextNodeId: 'koa-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
@@ -102,8 +102,8 @@ export const regionalRoots: DiagnosticNode[] = [
     content: 'Which best describes your front knee/kneecap pain?',
     options: [
       { label: 'Diffuse pain around/behind the kneecap, worsened by stairs or prolonged sitting', nextNodeId: 'pfps-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
-      { label: 'Localized pain just below the kneecap, worsened by jumping', nextNodeId: 'ptend-q1', highlightMuscles: ['knees'], pin: { top: 74, left: 50, zoom: 3.5 } },
-      { label: 'Pain and a bony bump just below the kneecap in a growing child/teen', nextNodeId: 'os-q1', highlightMuscles: ['knees'], pin: { top: 76, left: 50, zoom: 3.5 } },
+      { label: 'Localized pain just below the kneecap, worsened by jumping', nextNodeId: 'ptend-q1', highlightMuscles: ['knees'], pin: { top: 58, left: 50 } },
+      { label: 'Pain and a bony bump just below the kneecap in a growing child/teen', nextNodeId: 'os-q1', highlightMuscles: ['knees'], pin: { top: 70, left: 50 } },
       { label: 'Sudden dislocation or slipping of the kneecap', nextNodeId: 'pi-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
       { label: 'Pain just below the kneecap that worsens when fully straightening the leg', nextNodeId: 'hfp-q1', highlightMuscles: ['knees'], pin: { top: 74, left: 50, zoom: 3.5 } },
       { label: 'Visible swelling like a pouch directly over the kneecap', nextNodeId: 'ppb-q1', highlightMuscles: ['knees'], pin: { top: 72, left: 50, zoom: 3.5 } },
@@ -115,10 +115,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your thigh or side-knee pain?',
     options: [
-      { label: 'Sudden, sharp pain in the back of the thigh during sprinting', nextNodeId: 'hsi-q1', highlightMuscles: ['hamstring'], modelType: 'posterior', pin: { top: 55, left: 50, zoom: 2.5 } },
-      { label: 'Sudden, sharp pain or direct bruising in the front of the thigh', nextNodeId: 'qs-q1', highlightMuscles: ['quadriceps'], pin: { top: 55, left: 50, zoom: 2.5 } },
-      { label: 'Sharp pain on the outside of the knee, common in runners', nextNodeId: 'itb-q1', highlightMuscles: ['knees', 'hamstring'], pin: { top: 72, left: 45, zoom: 3.5 } },
-      { label: 'Pain on the inner shin just below the knee joint line', nextNodeId: 'pa-q1', highlightMuscles: ['knees', 'calves'], pin: { top: 76, left: 55, zoom: 3.5 } },
+      { label: 'Sudden, sharp pain in the back of the thigh during sprinting', nextNodeId: 'hsi-q1', highlightMuscles: ['hamstring'], pin: { top: 20, left: 50 } },
+      { label: 'Sudden, sharp pain or direct bruising in the front of the thigh', nextNodeId: 'qs-q1', highlightMuscles: ['quadriceps'], pin: { top: 20, left: 50 } },
+      { label: 'Sharp pain on the outside of the knee, common in runners', nextNodeId: 'itb-q1', highlightMuscles: ['knees', 'hamstring'], pin: { top: 48, left: 32 } },
+      { label: 'Pain on the inner shin just below the knee joint line', nextNodeId: 'pa-q1', highlightMuscles: ['knees', 'calves'], pin: { top: 68, left: 62 } },
     ]
   },
 
@@ -131,10 +131,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is your pain primarily located?',
     options: [
-      { label: 'Groin or Front of Hip', nextNodeId: 'hpg-groin', highlightMuscles: ['adductor'], pin: { top: 50, left: 50, zoom: 3.5 } },
-      { label: 'Side of Hip', nextNodeId: 'hpg-side', highlightMuscles: ['abductors'], pin: { top: 45, left: 35, zoom: 3.5 } },
-      { label: 'Deep Hip Pain or Bone Pain', nextNodeId: 'hpg-deep', highlightMuscles: ['gluteal', 'adductor'], pin: { top: 46, left: 50, zoom: 3.5 } },
-      { label: 'Buttock or Back of Hip', nextNodeId: 'hpg-back', highlightMuscles: ['gluteal'], modelType: 'posterior', pin: { top: 45, left: 50, zoom: 3.5 } },
+      { label: 'Groin or Front of Hip', nextNodeId: 'hpg-groin', highlightMuscles: ['adductor'], pin: { top: 55, left: 55 } },
+      { label: 'Side of Hip', nextNodeId: 'hpg-side', highlightMuscles: ['abductors'], pin: { top: 50, left: 30 } },
+      { label: 'Deep Hip Pain or Bone Pain', nextNodeId: 'hpg-deep', highlightMuscles: ['gluteal', 'adductor'], pin: { top: 50, left: 50 } },
+      { label: 'Buttock or Back of Hip', nextNodeId: 'hpg-back', highlightMuscles: ['gluteal'], pin: { top: 50, left: 50 } },
     ]
   },
   {
@@ -143,8 +143,8 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your groin/front hip pain?',
     options: [
-      { label: 'Pain in the groin/inner thigh during activity or squeezing legs together', nextNodeId: 'gp-q1', highlightMuscles: ['adductor'], pin: { top: 52, left: 45, zoom: 3.5 } },
-      { label: 'Pinching groin pain with deep hip flexion, pivoting, or sitting', nextNodeId: 'fai-q1', highlightMuscles: ['abs', 'adductor'], pin: { top: 48, left: 40, zoom: 3.5 } },
+      { label: 'Pain in the groin/inner thigh during activity or squeezing legs together', nextNodeId: 'gp-q1', highlightMuscles: ['adductor'], pin: { top: 58, left: 58 } },
+      { label: 'Pinching groin pain with deep hip flexion, pivoting, or sitting', nextNodeId: 'fai-q1', highlightMuscles: ['abs', 'adductor'], pin: { top: 48, left: 45 } },
       { label: 'Deep groin pain with clicking, catching, or giving way', nextNodeId: 'hlt-q1', highlightMuscles: ['abs', 'adductor'], pin: { top: 48, left: 40, zoom: 3.5 } },
     ]
   },
@@ -154,9 +154,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your side hip pain?',
     options: [
-      { label: 'Pain on the outside of the hip, worsened by lying on that side', nextNodeId: 'gtps-q1', highlightMuscles: ['abductors', 'gluteal'], modelType: 'posterior', pin: { top: 48, left: 35, zoom: 3.5 } },
-      { label: 'Audible or palpable snapping around the hip during movement', nextNodeId: 'shp-q1', highlightMuscles: ['abductors'], pin: { top: 48, left: 35, zoom: 3.5 } },
-      { label: 'Severe pain and bruising on the hip bone after a direct blow', nextNodeId: 'hp-q1', highlightMuscles: ['abs', 'obliques'], pin: { top: 45, left: 38, zoom: 3.5 } },
+      { label: 'Pain on the outside of the hip, worsened by lying on that side', nextNodeId: 'gtps-q1', highlightMuscles: ['abductors', 'gluteal'], pin: { top: 50, left: 30 } },
+      { label: 'Audible or palpable snapping around the hip during movement', nextNodeId: 'shp-q1', highlightMuscles: ['abductors'], pin: { top: 50, left: 30 } },
+      { label: 'Severe pain and bruising on the hip bone after a direct blow', nextNodeId: 'hp-q1', highlightMuscles: ['abs', 'obliques'], pin: { top: 38, left: 35 } },
     ]
   },
   {
@@ -166,8 +166,8 @@ export const regionalRoots: DiagnosticNode[] = [
     content: 'Which best describes your deep hip pain?',
     options: [
       { label: 'Progressive deep hip/groin pain worsening with weight-bearing', nextNodeId: 'hsf-q1', highlightMuscles: ['adductor'], pin: { top: 48, left: 40, zoom: 3.5 } },
-      { label: 'Deep hip pain, stiffness, and loss of movement (common in older adults)', nextNodeId: 'hoa-q1', highlightMuscles: ['gluteal', 'adductor'], pin: { top: 48, left: 40, zoom: 3.5 } },
-      { label: 'Sudden pain in the pelvis during explosive sprinting or kicking in a teenager', nextNodeId: 'aa-q1', highlightMuscles: ['abs', 'adductor'], pin: { top: 48, left: 50, zoom: 3.5 } },
+      { label: 'Deep hip pain, stiffness, and loss of movement (common in older adults)', nextNodeId: 'hoa-q1', highlightMuscles: ['gluteal', 'adductor'], pin: { top: 50, left: 50 } },
+      { label: 'Sudden pain in the pelvis during explosive sprinting or kicking in a teenager', nextNodeId: 'aa-q1', highlightMuscles: ['abs', 'adductor'], pin: { top: 40, left: 50 } },
     ]
   },
   {
@@ -176,7 +176,7 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your buttock pain?',
     options: [
-      { label: 'Buttock pain with possible radiating nerve pain down the leg', nextNodeId: 'pir-q1', highlightMuscles: ['gluteal'], modelType: 'posterior', pin: { top: 48, left: 50, zoom: 3.5 } },
+      { label: 'Buttock pain with possible radiating nerve pain down the leg', nextNodeId: 'pir-q1', highlightMuscles: ['gluteal'], pin: { top: 52, left: 48 } },
     ]
   },
 
@@ -189,10 +189,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is your pain primarily located?',
     options: [
-      { label: 'Lower Back Pain radiating down leg', nextNodeId: 'sp-radiating', highlightMuscles: ['lower-back', 'hamstring'], modelType: 'posterior', pin: { top: 55, left: 50, zoom: 2.0 } },
-      { label: 'Lower Back Pain (isolated)', nextNodeId: 'sp-lbp', highlightMuscles: ['lower-back'], modelType: 'posterior', pin: { top: 45, left: 50, zoom: 2.5 } },
-      { label: 'Pelvic / Tailbone Pain', nextNodeId: 'sp-pelvis', highlightMuscles: ['lower-back', 'gluteal'], modelType: 'posterior', pin: { top: 48, left: 50, zoom: 3.5 } },
-      { label: 'Mid-Back or Rib Pain', nextNodeId: 'sp-midback', highlightMuscles: ['upper-back'], modelType: 'posterior', pin: { top: 30, left: 50, zoom: 2.5 } },
+      { label: 'Lower Back Pain radiating down leg', nextNodeId: 'sp-radiating', highlightMuscles: ['lower-back', 'hamstring'], pin: { top: 65, left: 50 } },
+      { label: 'Lower Back Pain (isolated)', nextNodeId: 'sp-lbp', highlightMuscles: ['lower-back'], pin: { top: 60, left: 50 } },
+      { label: 'Pelvic / Tailbone Pain', nextNodeId: 'sp-pelvis', highlightMuscles: ['lower-back', 'gluteal'], pin: { top: 75, left: 50 } },
+      { label: 'Mid-Back or Rib Pain', nextNodeId: 'sp-midback', highlightMuscles: ['upper-back'], pin: { top: 35, left: 50 } },
     ]
   },
   {
@@ -232,7 +232,7 @@ export const regionalRoots: DiagnosticNode[] = [
     content: 'Which best describes your mid-back or rib pain?',
     options: [
       { label: 'Ache or pain in the mid-back (between shoulder blades) or front of chest', nextNodeId: 'tp-q1', highlightMuscles: ['upper-back'], modelType: 'posterior', pin: { top: 30, left: 50, zoom: 2.5 } },
-      { label: 'Localized rib pain that worsens with deep breathing or twisting', nextNodeId: 'rib-q1', highlightMuscles: ['upper-back'], modelType: 'posterior', pin: { top: 35, left: 50, zoom: 2.5 } },
+      { label: 'Localized rib pain that worsens with deep breathing or twisting', nextNodeId: 'rib-q1', highlightMuscles: ['upper-back'], pin: { top: 40, left: 42 } },
     ]
   },
 
@@ -260,7 +260,7 @@ export const regionalRoots: DiagnosticNode[] = [
       { label: 'Shoulder pain and weakness during overhead activities, with a painful arc', nextNodeId: 'rc-q1', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
       { label: 'Deep shoulder pain specifically after repetitive swimming', nextNodeId: 'swsh-q1', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
       { label: 'Pinching pain when lifting the arm, often worse at night', nextNodeId: 'sbur-q1', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
-      { label: 'Shoulder pain accompanied by altered movement or "winging" of the shoulder blade', nextNodeId: 'sd-q1', highlightMuscles: ['back-deltoids'], modelType: 'posterior', pin: { top: 25, left: 75, zoom: 3.5 } },
+      { label: 'Shoulder pain accompanied by altered movement or "winging" of the shoulder blade', nextNodeId: 'sd-q1', highlightMuscles: ['back-deltoids'], pin: { top: 25, left: 75 } },
     ]
   },
   {
@@ -313,7 +313,7 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your elbow pain?',
     options: [
-      { label: 'Pain on the outside of the elbow, worsened by gripping', nextNodeId: 'te-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 35, left: 85, zoom: 3.5 } },
+      { label: 'Pain on the outside of the elbow, worsened by gripping', nextNodeId: 'te-q1', highlightMuscles: ['forearm'], pin: { top: 35, left: 85 } },
       { label: 'Pain on the inside of the elbow, worsened by gripping or throwing', nextNodeId: 'ge-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 35, left: 20, zoom: 3.5 } },
       { label: 'Swelling like a golf ball on the point of the elbow', nextNodeId: 'ob-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 35, left: 85, zoom: 3.5 } },
       { label: 'Pain on the inside of the elbow after repetitive hard throwing', nextNodeId: 'ucl-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 35, left: 20, zoom: 3.5 } },
@@ -374,7 +374,7 @@ export const regionalRoots: DiagnosticNode[] = [
     options: [
       { label: 'Neck pain and stiffness after a whiplash injury (e.g., tackle, collision)', nextNodeId: 'wad-q1', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
       { label: 'Acute neck muscle strain or stiffness', nextNodeId: 'csp-q1', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
-      { label: 'Neck pain with numbness, tingling, or weakness shooting down the arm', nextNodeId: 'cr-q1', highlightMuscles: ['neck'], pin: { top: 18, left: 50, zoom: 3.5 } },
+      { label: 'Neck pain with numbness, tingling, or weakness shooting down the arm', nextNodeId: 'cr-q1', highlightMuscles: ['neck'], pin: { top: 65, left: 50 } },
       { label: 'Sudden, intense burning or electric shock feeling down the arm after a tackle', nextNodeId: 'sb-q1', highlightMuscles: ['neck'], pin: { top: 18, left: 50, zoom: 3.5 } },
     ]
   },

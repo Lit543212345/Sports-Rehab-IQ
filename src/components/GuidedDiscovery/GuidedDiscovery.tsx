@@ -126,13 +126,25 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                     whileTap={{ scale: 0.97 }}
                   >
                     <div className="guided-discovery__option-diagram">
-                      <Model
-                        type={option.modelType || 'anterior'}
-                        data={[{ name: 'Highlight', muscles: (option.highlightMuscles || REGION_TO_MUSCLES[region] || []) as Muscle[] }]}
-                        bodyColor="var(--color-bg-secondary)"
-                        highlightedColors={['var(--color-accent)']}
-                        style={{ width: '40px', height: '80px' }}
-                      />
+                      {option.pin && <div className="guided-discovery__pin" />}
+                      <div 
+                        className="guided-discovery__model-wrapper"
+                        style={{
+                          left: '50%',
+                          top: '50%',
+                          transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin?.zoom || (option.pin ? 3.5 : 0.75)})`,
+                          width: '40px',
+                          height: '80px',
+                        }}
+                      >
+                        <Model
+                          type={option.modelType || 'anterior'}
+                          data={[{ name: 'Highlight', muscles: (option.highlightMuscles || REGION_TO_MUSCLES[region] || []) as Muscle[] }]}
+                          bodyColor="var(--color-bg-secondary)"
+                          highlightedColors={['var(--color-accent)']}
+                          style={{ width: '100%', height: '100%' }}
+                        />
+                      </div>
                     </div>
                     <span className="guided-discovery__option-label">{option.label}</span>
                   </motion.button>

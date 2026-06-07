@@ -101,6 +101,8 @@ export interface DiagnosticOption {
   highlightMuscles?: string[];
   /** Which side of the body to show for the diagram */
   modelType?: 'anterior' | 'posterior';
+  /** Optional pin coordinates for the body map */
+  pin?: { top: number, left: number, zoom?: number };
 }
 
 /** User's answer to a diagnostic question */

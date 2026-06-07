@@ -31,10 +31,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'las-q3', type: 'question', category: 'location',
     content: 'Where is the main area of pain?',
     options: [
-      { label: 'Outside (lateral) ankle', nextNodeId: 'las-q4', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior' },
-      { label: 'Inside (medial) ankle', nextNodeId: 'las-medial', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior' },
-      { label: 'Front of ankle', nextNodeId: 'las-anterior', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior' },
-      { label: 'Back of ankle / Achilles area', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior' },
+      { label: 'Outside (lateral) ankle', nextNodeId: 'las-q4', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 92, left: 36 } },
+      { label: 'Inside (medial) ankle', nextNodeId: 'las-medial', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 92, left: 44 } },
+      { label: 'Front of ankle', nextNodeId: 'las-anterior', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'anterior', pin: { top: 90, left: 40 } },
+      { label: 'Back of ankle / Achilles area', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 90, left: 40 } },
     ],
   },
   'las-q4': {
@@ -145,10 +145,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pfps-q2', type: 'question', category: 'location',
     content: 'Where exactly is your knee pain?',
     options: [
-      { label: 'Around or behind the kneecap', nextNodeId: 'pfps-q3', highlightMuscles: ['knees'], modelType: 'anterior' },
-      { label: 'Below the kneecap (on the tendon)', nextNodeId: 'pfps-patellar-tend', highlightMuscles: ['knees'], modelType: 'anterior' },
-      { label: 'Outside of the knee', nextNodeId: 'pfps-itbs', highlightMuscles: ['knees'], modelType: 'anterior' },
-      { label: 'Inside of the knee', nextNodeId: 'pfps-medial', highlightMuscles: ['knees'], modelType: 'anterior' },
+      { label: 'Around or behind the kneecap', nextNodeId: 'pfps-q3', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 40 } },
+      { label: 'Below the kneecap (on the tendon)', nextNodeId: 'pfps-patellar-tend', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 74, left: 40 } },
+      { label: 'Outside of the knee', nextNodeId: 'pfps-itbs', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 35 } },
+      { label: 'Inside of the knee', nextNodeId: 'pfps-medial', highlightMuscles: ['knees'], modelType: 'anterior', pin: { top: 72, left: 45 } },
     ],
   },
   'pfps-q3': {
@@ -203,10 +203,10 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'pf-q2', type: 'question', category: 'location',
     content: 'Where exactly is the pain on your foot?',
     options: [
-      { label: 'Under the heel (plantar surface)', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior' },
-      { label: 'Back of heel (Achilles area)', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior' },
-      { label: 'Arch of the foot', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior' },
-      { label: 'Ball of the foot / toes', nextNodeId: 'pf-metatarsal', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior' },
+      { label: 'Under the heel (plantar surface)', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 96, left: 40 } },
+      { label: 'Back of heel (Achilles area)', nextNodeId: 'at-q1', highlightMuscles: ['calves'], modelType: 'posterior', pin: { top: 92, left: 40 } },
+      { label: 'Arch of the foot', nextNodeId: 'pf-q3', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 94, left: 42 } },
+      { label: 'Ball of the foot / toes', nextNodeId: 'pf-metatarsal', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 98, left: 40 } },
     ],
   },
   'pf-q3': {
@@ -365,9 +365,9 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q1', type: 'question', category: 'location',
     content: 'Where is your elbow pain located?',
     options: [
-      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior' },
-      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior' },
-      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior' },
+      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior', pin: { top: 35, left: 10 } },
+      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 35, left: 20 } },
+      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior', pin: { top: 35, left: 15 } },
     ],
   },
   'te-q2': {
@@ -421,9 +421,9 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'gp-q1', type: 'question', category: 'location',
     content: 'Where in the groin/hip area is your pain?',
     options: [
-      { label: 'Inner thigh / adductor area', nextNodeId: 'gp-referral', highlightMuscles: ['adductor'], modelType: 'anterior' },
-      { label: 'Front of hip / crease', nextNodeId: 'gp-referral', highlightMuscles: ['abs', 'quadriceps'], modelType: 'anterior' },
-      { label: 'Pubic bone area', nextNodeId: 'gp-referral', highlightMuscles: ['abs'], modelType: 'anterior' },
+      { label: 'Inner thigh / adductor area', nextNodeId: 'gp-referral', highlightMuscles: ['adductor'], modelType: 'anterior', pin: { top: 52, left: 45 } },
+      { label: 'Front of hip / crease', nextNodeId: 'gp-referral', highlightMuscles: ['abs', 'quadriceps'], modelType: 'anterior', pin: { top: 48, left: 40 } },
+      { label: 'Pubic bone area', nextNodeId: 'gp-referral', highlightMuscles: ['abs'], modelType: 'anterior', pin: { top: 50, left: 50 } },
     ],
   },
   'gp-referral': {

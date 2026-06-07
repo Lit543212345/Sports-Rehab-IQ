@@ -144,22 +144,28 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                   >
                     <div className="guided-discovery__option-diagram">
                       {diagramUrl ? (
-                        <img 
-                          src={diagramUrl} 
-                          alt={region} 
-                          className="guided-discovery__region-diagram-img"
-                        />
+                        <div 
+                          className="guided-discovery__model-wrapper"
+                          style={{
+                            left: '50%',
+                            top: '50%',
+                            transformOrigin: option.pin ? `${option.pin.left}% ${option.pin.top}%` : '50% 50%',
+                            transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin?.zoom || (option.pin ? 3.0 : 1.0)})`,
+                            width: '56px',
+                            height: '56px',
+                          }}
+                        >
+                          <img 
+                            src={diagramUrl} 
+                            alt={region} 
+                            className="guided-discovery__region-diagram-img"
+                          />
+                        </div>
                       ) : (
                         <div className="guided-discovery__systemic-placeholder">🌐</div>
                       )}
                       {option.pin && (
-                        <div 
-                          className="guided-discovery__pin" 
-                          style={{
-                            left: `${option.pin.left}%`,
-                            top: `${option.pin.top}%`
-                          }}
-                        />
+                        <div className="guided-discovery__pin" />
                       )}
                     </div>
                     <span className="guided-discovery__option-label">{option.label}</span>

@@ -365,16 +365,16 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q1', type: 'question', category: 'location',
     content: 'Where is your elbow pain located?',
     options: [
-      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior', pin: { top: 32, left: 48 } },
-      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 32, left: 42 } },
-      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior', pin: { top: 35, left: 45 } },
+      { label: 'Outside (lateral) of the elbow', nextNodeId: 'te-q2', highlightMuscles: ['forearm', 'triceps'], modelType: 'anterior', pin: { top: 48, left: 63, zoom: 3.5 } },
+      { label: 'Inside (medial) of the elbow', nextNodeId: 'te-medial', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 55, left: 25, zoom: 3.5 } },
+      { label: 'Back of the elbow', nextNodeId: 'te-posterior', highlightMuscles: ['triceps'], modelType: 'posterior', pin: { top: 48, left: 63, zoom: 3.5 } },
     ],
   },
   'te-q2': {
     id: 'te-q2', type: 'question', category: 'symptom',
     content: 'Is your pain worse when gripping, turning a doorknob, or lifting with palm down?',
     options: [
-      { label: 'Yes — gripping/wrist extension aggravates it', nextNodeId: 'te-q3', pin: { top: 32, left: 48 } },
+      { label: 'Yes — gripping/wrist extension aggravates it', nextNodeId: 'te-q3', pin: { top: 48, left: 63, zoom: 3.5 } },
       { label: 'No — pain is more with bending/flexion', nextNodeId: 'te-medial' },
     ],
   },
@@ -382,7 +382,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
     id: 'te-q3', type: 'physical-test', category: 'test',
     content: 'Cozen\'s Test: Make a fist and extend your wrist upward against resistance (push against a table). Does this reproduce your lateral elbow pain?',
     options: [
-      { label: 'Yes — reproduces my pain', nextNodeId: 'te-result', pin: { top: 32, left: 48 } },
+      { label: 'Yes — reproduces my pain', nextNodeId: 'te-result', pin: { top: 48, left: 63, zoom: 3.5 } },
       { label: 'No pain with this test', nextNodeId: 'te-other' },
     ],
   },
@@ -507,30 +507,30 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Golfer's Elbow Tree ════ */
   'ge-q1': { id: 'ge-q1', type: 'question', category: 'location', content: 'Is your pain on the INNER (medial) side of the elbow?',
-    options: [{ label: 'Yes — inner elbow with gripping/flexion pain', nextNodeId: 'ge-result', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 32, left: 42 } }, { label: 'No — outer elbow', nextNodeId: 'te-q1', highlightMuscles: ['forearm', 'triceps'], modelType: 'posterior' }] },
+    options: [{ label: 'Yes — inner elbow with gripping/flexion pain', nextNodeId: 'ge-result', highlightMuscles: ['forearm', 'biceps'], modelType: 'anterior', pin: { top: 55, left: 25, zoom: 3.5 } }, { label: 'No — outer elbow', nextNodeId: 'te-q1', highlightMuscles: ['forearm', 'triceps'], modelType: 'posterior' }] },
   'ge-result': { id: 'ge-result', type: 'result', resultInjuryId: 'golfers-elbow', content: 'Your symptoms are consistent with medial epicondylalgia (golfer\'s elbow). This is a tendinopathy of the common flexor origin.', detail: 'Treatment mirrors tennis elbow — isometric loading progressing to eccentric and heavy slow resistance exercises.' },
 
   /* ════ Carpal Tunnel Tree ════ */
   'cts-q1': { id: 'cts-q1', type: 'question', category: 'symptom', content: 'Do you experience numbness or tingling in your thumb, index, and middle fingers?',
-    options: [{ label: 'Yes — especially at night or with sustained gripping', nextNodeId: 'cts-result', pin: { top: 62, left: 35 } }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — especially at night or with sustained gripping', nextNodeId: 'cts-result', pin: { top: 60, left: 60, zoom: 4.0 } }, { label: 'No — different pattern', nextNodeId: 'no-match' }] },
   'cts-result': { id: 'cts-result', type: 'result', resultInjuryId: 'carpal-tunnel', content: 'Your symptoms suggest carpal tunnel syndrome — compression of the median nerve at the wrist.', detail: 'Conservative treatment includes splinting (especially at night), nerve gliding exercises, and activity modification.' },
 
   /* ════ De Quervain's Tree ════ */
   'dq-q1': { id: 'dq-q1', type: 'question', category: 'location', content: 'Is your pain at the thumb-side of the wrist, worsened by gripping or moving the thumb?',
-    options: [{ label: 'Yes — radial wrist pain with thumb use', nextNodeId: 'dq-result', highlightMuscles: ['forearm'], modelType: 'anterior', pin: { top: 62, left: 32 } }, { label: 'No — different location', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — radial wrist pain with thumb use', nextNodeId: 'dq-result', highlightMuscles: ['forearm'], modelType: 'anterior', pin: { top: 66, left: 32, zoom: 4.0 } }, { label: 'No — different location', nextNodeId: 'no-match' }] },
   'dq-result': { id: 'dq-result', type: 'result', resultInjuryId: 'de-quervain', content: 'Your symptoms suggest De Quervain\'s tenosynovitis — inflammation of the thumb-side wrist tendons.', detail: 'Treatment includes thumb spica splinting, activity modification, and gentle tendon gliding exercises.' },
 
   /* ════ Wrist Sprain Tree ════ */
   'ws-q1': { id: 'ws-q1', type: 'question', category: 'mechanism', content: 'Did you fall on an outstretched hand (FOOSH)?',
-    options: [{ label: 'Yes — FOOSH injury', nextNodeId: 'ws-q2', pin: { top: 62, left: 35 } }, { label: 'Gradual onset', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — FOOSH injury', nextNodeId: 'ws-q2', pin: { top: 66, left: 32, zoom: 4.0 } }, { label: 'Gradual onset', nextNodeId: 'no-match' }] },
   'ws-q2': { id: 'ws-q2', type: 'question', category: 'location', content: 'Is there tenderness in the anatomical snuffbox (hollow at base of thumb on back of wrist)?',
-    options: [{ label: 'Yes — snuffbox tender', nextNodeId: 'ws-referral', pin: { top: 62, left: 32 } }, { label: 'No — general wrist pain', nextNodeId: 'ws-result', pin: { top: 62, left: 35 } }] },
+    options: [{ label: 'Yes — snuffbox tender', nextNodeId: 'ws-referral', pin: { top: 68, left: 30, zoom: 4.0 } }, { label: 'No — general wrist pain', nextNodeId: 'ws-result', pin: { top: 66, left: 32, zoom: 4.0 } }] },
   'ws-result': { id: 'ws-result', type: 'result', resultInjuryId: 'wrist-sprain', content: 'Your symptoms suggest a wrist sprain. RICE protocol and supportive splinting recommended.', detail: 'If pain persists beyond 2 weeks, seek imaging to rule out occult fracture.' },
   'ws-referral': { id: 'ws-referral', type: 'referral', content: '⚠️ Anatomical snuffbox tenderness after a fall suggests possible scaphoid fracture. X-ray required — treat as fracture until proven otherwise.' },
 
   /* ════ Trigger Finger Tree ════ */
   'tf-q1': { id: 'tf-q1', type: 'question', category: 'symptom', content: 'Does your finger catch, lock, or snap when bending/straightening?',
-    options: [{ label: 'Yes — triggering/catching present', nextNodeId: 'tf-result', pin: { top: 78, left: 52 } }, { label: 'No catching', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — triggering/catching present', nextNodeId: 'tf-result', pin: { top: 68, left: 74, zoom: 4.5 } }, { label: 'No catching', nextNodeId: 'no-match' }] },
   'tf-result': { id: 'tf-result', type: 'result', resultInjuryId: 'trigger-finger', content: 'Your symptoms are consistent with trigger finger (stenosing tenosynovitis).', detail: 'Conservative management includes activity modification and gentle stretching. Corticosteroid injection is effective. Surgery (A1 pulley release) if conservative management fails.' },
 
   /* ════ Non-Specific LBP Tree ════ */
@@ -661,7 +661,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Olecranon Bursitis Tree ════ */
   'ob-q1': { id: 'ob-q1', type: 'question', category: 'symptom', content: 'Do you have a visible, fluid-filled swelling over the point of your elbow?',
-    options: [{ label: 'Yes — swelling over elbow tip', nextNodeId: 'ob-q2', pin: { top: 35, left: 45 } }, { label: 'No visible swelling', nextNodeId: 'te-q1' }] },
+    options: [{ label: 'Yes — swelling over elbow tip', nextNodeId: 'ob-q2', pin: { top: 48, left: 63, zoom: 3.5 } }, { label: 'No visible swelling', nextNodeId: 'te-q1' }] },
   'ob-q2': { id: 'ob-q2', type: 'question', category: 'symptom', content: 'Is the swelling red, hot, and painful with fever or chills?',
     options: [{ label: 'Yes — infection signs', nextNodeId: 'ob-emergency' }, { label: 'No — just swollen, not hot', nextNodeId: 'ob-result' }] },
   'ob-result': { id: 'ob-result', type: 'result', resultInjuryId: 'olecranon-bursitis', content: 'Your symptoms suggest olecranon bursitis — fluid accumulation over the elbow tip. Typically non-infected (aseptic).', detail: 'Protect the elbow from further irritation. Compression wrap. Avoid leaning on the elbow. Most resolve in 2-6 weeks. Aspiration only if very tense.' },
@@ -669,7 +669,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ UCL Sprain Tree ════ */
   'ucl-q1': { id: 'ucl-q1', type: 'question', category: 'mechanism', content: 'Are you a throwing athlete (baseball, cricket, javelin) with inner elbow pain during or after throwing?',
-    options: [{ label: 'Yes — medial elbow pain with throwing', nextNodeId: 'ucl-q2', pin: { top: 32, left: 42 } }, { label: 'No — not a throwing injury', nextNodeId: 'ge-q1' }] },
+    options: [{ label: 'Yes — medial elbow pain with throwing', nextNodeId: 'ucl-q2', pin: { top: 55, left: 25, zoom: 3.5 } }, { label: 'No — not a throwing injury', nextNodeId: 'ge-q1' }] },
   'ucl-q2': { id: 'ucl-q2', type: 'question', category: 'symptom', content: 'Did you feel a pop or sudden sharp pain on the inside of the elbow during a single throw?',
     options: [{ label: 'Yes — acute pop during throw', nextNodeId: 'ucl-referral' }, { label: 'Gradual onset over weeks/months', nextNodeId: 'ucl-result' }] },
   'ucl-result': { id: 'ucl-result', type: 'result', resultInjuryId: 'ucl-sprain', content: 'Your symptoms suggest UCL sprain from repetitive valgus stress. This is a chronic overuse injury of the throwing elbow.', detail: 'Rest from throwing, progressive rehabilitation, and gradual return to throwing program. Professional assessment recommended for imaging.' },
@@ -787,7 +787,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Capitellar OCD Tree ════ */
   'cocd-q1': { id: 'cocd-q1', type: 'question', category: 'symptom', content: 'Are you a young athlete (12-16) with LATERAL elbow pain during throwing or gymnastics?',
-    options: [{ label: 'Yes — adolescent with lateral elbow pain', nextNodeId: 'cocd-q2', pin: { top: 32, left: 48 } }, { label: 'No — adult or medial pain', nextNodeId: 'te-q1' }] },
+    options: [{ label: 'Yes — adolescent with lateral elbow pain', nextNodeId: 'cocd-q2', pin: { top: 48, left: 63, zoom: 3.5 } }, { label: 'No — adult or medial pain', nextNodeId: 'te-q1' }] },
   'cocd-q2': { id: 'cocd-q2', type: 'question', category: 'symptom', content: 'Does your elbow lock, catch, or fail to fully straighten?',
     options: [{ label: 'Yes — locking/catching', nextNodeId: 'cocd-referral' }, { label: 'No — pain only', nextNodeId: 'cocd-result' }] },
   'cocd-result': { id: 'cocd-result', type: 'result', resultInjuryId: 'capitellar-ocd', content: 'Your symptoms suggest capitellar OCD. Lateral elbow pain in a young thrower/gymnast is the hallmark.', detail: 'Complete rest from throwing for 3-6 months. Imaging (MRI) recommended to stage the lesion. Early detection = better outcomes.' },
@@ -795,7 +795,7 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Skier's Thumb Tree ════ */
   'skt-q1': { id: 'skt-q1', type: 'question', category: 'mechanism', content: 'Did you injure your thumb from a forced outward bending (abduction), such as falling on a ski pole or catching a ball awkwardly?',
-    options: [{ label: 'Yes — forced thumb abduction', nextNodeId: 'skt-q2', pin: { top: 72, left: 42 } }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — forced thumb abduction', nextNodeId: 'skt-q2', pin: { top: 74, left: 30, zoom: 4.5 } }, { label: 'No — different mechanism', nextNodeId: 'no-match' }] },
   'skt-q2': { id: 'skt-q2', type: 'question', category: 'symptom', content: 'Is the thumb completely unstable — can you feel it "opening up" with no firm endpoint when stressed?',
     options: [{ label: 'Yes — no firm endpoint', nextNodeId: 'skt-referral' }, { label: 'Sore but stable', nextNodeId: 'skt-result' }] },
   'skt-result': { id: 'skt-result', type: 'result', resultInjuryId: 'skiers-thumb', content: 'Your symptoms suggest a partial thumb UCL sprain. Thumb is sore but has a stable endpoint.', detail: 'Thumb spica splint for 4-6 weeks. Protect from further abduction stress. Should heal with conservative management.' },
@@ -803,12 +803,12 @@ export const diagnosticNodes: Record<string, DiagnosticNode> = {
 
   /* ════ Mallet Finger Tree ════ */
   'mf-q1': { id: 'mf-q1', type: 'question', category: 'symptom', content: 'Is the tip of your finger drooping and you cannot actively straighten the last joint (DIP)?',
-    options: [{ label: 'Yes — fingertip droops, can\'t straighten DIP', nextNodeId: 'mf-result', pin: { top: 82, left: 60 } }, { label: 'No droop', nextNodeId: 'hf-q1' }] },
+    options: [{ label: 'Yes — fingertip droops, can\'t straighten DIP', nextNodeId: 'mf-result', pin: { top: 84, left: 14, zoom: 4.5 } }, { label: 'No droop', nextNodeId: 'hf-q1' }] },
   'mf-result': { id: 'mf-result', type: 'result', resultInjuryId: 'mallet-finger', content: 'Your symptoms indicate a mallet finger — rupture of the extensor tendon at the fingertip.', detail: 'CONTINUOUS splinting in extension for 6-8 weeks. The DIP joint must NEVER flex during this period — even briefly removing the splint resets healing. Get an X-ray to check for bony avulsion.' },
 
   /* ════ Hand Fracture/Dislocation Tree ════ */
   'hf-q1': { id: 'hf-q1', type: 'question', category: 'mechanism', content: 'Did you injure your hand from a direct blow, punch, ball impact, or fall — with visible swelling or deformity?',
-    options: [{ label: 'Yes — trauma with swelling/deformity', nextNodeId: 'hf-q2', pin: { top: 76, left: 52 } }, { label: 'No direct trauma', nextNodeId: 'no-match' }] },
+    options: [{ label: 'Yes — trauma with swelling/deformity', nextNodeId: 'hf-q2', pin: { top: 74, left: 24, zoom: 4.5 } }, { label: 'No direct trauma', nextNodeId: 'no-match' }] },
   'hf-q2': { id: 'hf-q2', type: 'question', category: 'symptom', content: 'When you make a fist, does any finger cross over or scissor on its neighbor?',
     options: [{ label: 'Yes — rotational deformity', nextNodeId: 'hf-referral' }, { label: 'No rotation — swollen but aligned', nextNodeId: 'hf-result' }] },
   'hf-result': { id: 'hf-result', type: 'result', resultInjuryId: 'hand-fracture', content: 'Your symptoms suggest a hand fracture or PIP dislocation. Non-rotated, stable fractures often heal with buddy taping.', detail: 'Get an X-ray to confirm. Buddy tape to adjacent finger, early motion within 1-2 weeks. 4-6 weeks total healing.' },

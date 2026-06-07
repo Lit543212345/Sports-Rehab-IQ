@@ -302,9 +302,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is your pain primarily located?',
     options: [
-      { label: 'Elbow', nextNodeId: 'ewh-elbow', highlightMuscles: ['forearm', 'biceps'], pin: { top: 32, left: 45, zoom: 3.5 } },
-      { label: 'Wrist', nextNodeId: 'ewh-wrist', highlightMuscles: ['forearm'], pin: { top: 62, left: 35, zoom: 4.0 } },
-      { label: 'Hand or Fingers', nextNodeId: 'ewh-hand', highlightMuscles: ['forearm'], pin: { top: 78, left: 55, zoom: 4.5 } },
+      { label: 'Elbow', nextNodeId: 'ewh-elbow', highlightMuscles: ['forearm', 'biceps'], pin: { top: 55, left: 25, zoom: 3.5 } },
+      { label: 'Wrist', nextNodeId: 'ewh-wrist', highlightMuscles: ['forearm'], pin: { top: 66, left: 32, zoom: 4.0 } },
+      { label: 'Hand or Fingers', nextNodeId: 'ewh-hand', highlightMuscles: ['forearm'], pin: { top: 74, left: 24, zoom: 4.5 } },
     ]
   },
   {
@@ -313,11 +313,11 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your elbow pain?',
     options: [
-      { label: 'Pain on the outside of the elbow, worsened by gripping', nextNodeId: 'te-q1', highlightMuscles: ['forearm'], pin: { top: 32, left: 48 } },
-      { label: 'Pain on the inside of the elbow, worsened by gripping or throwing', nextNodeId: 'ge-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 32, left: 42, zoom: 3.5 } },
-      { label: 'Swelling like a golf ball on the point of the elbow', nextNodeId: 'ob-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 35, left: 45, zoom: 3.5 } },
-      { label: 'Pain on the inside of the elbow after repetitive hard throwing', nextNodeId: 'ucl-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 32, left: 42, zoom: 3.5 } },
-      { label: 'Deep, locking pain on the outside of the elbow in a young thrower or gymnast', nextNodeId: 'cocd-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 32, left: 48, zoom: 3.5 } },
+      { label: 'Pain on the outside of the elbow, worsened by gripping', nextNodeId: 'te-q1', highlightMuscles: ['forearm'], pin: { top: 48, left: 63, zoom: 3.5 } },
+      { label: 'Pain on the inside of the elbow, worsened by gripping or throwing', nextNodeId: 'ge-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 55, left: 25, zoom: 3.5 } },
+      { label: 'Swelling like a golf ball on the point of the elbow', nextNodeId: 'ob-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 48, left: 63, zoom: 3.5 } },
+      { label: 'Pain on the inside of the elbow after repetitive hard throwing', nextNodeId: 'ucl-q1', highlightMuscles: ['forearm', 'biceps'], pin: { top: 55, left: 25, zoom: 3.5 } },
+      { label: 'Deep, locking pain on the outside of the elbow in a young thrower or gymnast', nextNodeId: 'cocd-q1', highlightMuscles: ['forearm'], modelType: 'posterior', pin: { top: 48, left: 63, zoom: 3.5 } },
     ]
   },
   {
@@ -326,9 +326,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your wrist pain?',
     options: [
-      { label: 'Numbness and tingling in the thumb, index, and middle fingers', nextNodeId: 'cts-q1', highlightMuscles: ['forearm'], pin: { top: 62, left: 35, zoom: 4.0 } },
-      { label: 'Pain on the thumb-side of the wrist, worsened by gripping or moving the thumb', nextNodeId: 'dq-q1', highlightMuscles: ['forearm'], pin: { top: 62, left: 32, zoom: 4.0 } },
-      { label: 'Wrist pain after falling on an outstretched hand', nextNodeId: 'ws-q1', highlightMuscles: ['forearm'], pin: { top: 62, left: 35, zoom: 4.0 } },
+      { label: 'Numbness and tingling in the thumb, index, and middle fingers', nextNodeId: 'cts-q1', highlightMuscles: ['forearm'], pin: { top: 60, left: 60, zoom: 4.0 } },
+      { label: 'Pain on the thumb-side of the wrist, worsened by gripping or moving the thumb', nextNodeId: 'dq-q1', highlightMuscles: ['forearm'], pin: { top: 66, left: 32, zoom: 4.0 } },
+      { label: 'Wrist pain after falling on an outstretched hand', nextNodeId: 'ws-q1', highlightMuscles: ['forearm'], pin: { top: 66, left: 32, zoom: 4.0 } },
     ]
   },
   {
@@ -337,10 +337,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'symptom',
     content: 'Which best describes your hand/finger pain?',
     options: [
-      { label: 'Finger catches or locks when bending, then releases with a painful snap', nextNodeId: 'tf-q1', highlightMuscles: ['forearm'], pin: { top: 78, left: 52, zoom: 4.5 } },
-      { label: 'Thumb pain after a fall, particularly if gripping a pole/object', nextNodeId: 'skt-q1', highlightMuscles: ['forearm'], pin: { top: 72, left: 42, zoom: 4.5 } },
-      { label: 'Inability to straighten the very tip of the finger after a ball strike', nextNodeId: 'mf-q1', highlightMuscles: ['forearm'], pin: { top: 82, left: 60, zoom: 4.5 } },
-      { label: 'Bone pain, bruising, and swelling in the hand or fingers after an impact', nextNodeId: 'hf-q1', highlightMuscles: ['forearm'], pin: { top: 76, left: 52, zoom: 4.5 } },
+      { label: 'Finger catches or locks when bending, then releases with a painful snap', nextNodeId: 'tf-q1', highlightMuscles: ['forearm'], pin: { top: 68, left: 74, zoom: 4.5 } },
+      { label: 'Thumb pain after a fall, particularly if gripping a pole/object', nextNodeId: 'skt-q1', highlightMuscles: ['forearm'], pin: { top: 74, left: 30, zoom: 4.5 } },
+      { label: 'Inability to straighten the very tip of the finger after a ball strike', nextNodeId: 'mf-q1', highlightMuscles: ['forearm'], pin: { top: 84, left: 14, zoom: 4.5 } },
+      { label: 'Bone pain, bruising, and swelling in the hand or fingers after an impact', nextNodeId: 'hf-q1', highlightMuscles: ['forearm'], pin: { top: 74, left: 24, zoom: 4.5 } },
     ]
   },
 

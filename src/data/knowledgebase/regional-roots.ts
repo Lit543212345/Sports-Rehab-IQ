@@ -10,10 +10,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is your pain primarily located?',
     options: [
-      { label: 'Foot or Heel', nextNodeId: 'llaf-foot' },
-      { label: 'Ankle or outside of foot', nextNodeId: 'llaf-ankle' },
-      { label: 'Back of Heel / Achilles', nextNodeId: 'llaf-achilles' },
-      { label: 'Lower Leg / Shin / Calf', nextNodeId: 'llaf-leg' },
+      { label: 'Foot or Heel', nextNodeId: 'llaf-foot', highlightMuscles: ['calves'], pin: { top: 90, left: 50, zoom: 3.5 } },
+      { label: 'Ankle or outside of foot', nextNodeId: 'llaf-ankle', highlightMuscles: ['calves'], pin: { top: 80, left: 50, zoom: 3.5 } },
+      { label: 'Back of Heel / Achilles', nextNodeId: 'llaf-achilles', highlightMuscles: ['left-soleus', 'right-soleus'], modelType: 'posterior', pin: { top: 85, left: 50, zoom: 3.5 } },
+      { label: 'Lower Leg / Shin / Calf', nextNodeId: 'llaf-leg', highlightMuscles: ['calves'], pin: { top: 70, left: 50, zoom: 3.5 } },
     ]
   },
   {
@@ -75,9 +75,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is the pain or primary symptom?',
     options: [
-      { label: 'Inside or deep within the knee', nextNodeId: 'kt-deep' },
-      { label: 'Front of the knee / Kneecap', nextNodeId: 'kt-front' },
-      { label: 'Side or back of thigh/knee', nextNodeId: 'kt-thigh' },
+      { label: 'Inside or deep within the knee', nextNodeId: 'kt-deep', highlightMuscles: ['knees'], pin: { top: 50, left: 50, zoom: 3.5 } },
+      { label: 'Front of the knee / Kneecap', nextNodeId: 'kt-front', highlightMuscles: ['knees'], pin: { top: 50, left: 50, zoom: 3.5 } },
+      { label: 'Side or back of thigh/knee', nextNodeId: 'kt-thigh', highlightMuscles: ['hamstring'], modelType: 'posterior', pin: { top: 40, left: 50, zoom: 2.5 } },
     ]
   },
   {
@@ -192,7 +192,7 @@ export const regionalRoots: DiagnosticNode[] = [
       { label: 'Lower Back Pain radiating down leg', nextNodeId: 'sp-radiating' },
       { label: 'Lower Back Pain (isolated)', nextNodeId: 'sp-lbp' },
       { label: 'Pelvic / Tailbone Pain', nextNodeId: 'sp-pelvis' },
-      { label: 'Mid-Back or Rib Pain', nextNodeId: 'sp-midback' },
+      { label: 'Mid-Back or Rib Pain', nextNodeId: 'sp-midback', highlightMuscles: ['upper-back'], modelType: 'posterior', pin: { top: 30, left: 50, zoom: 2.5 } },
     ]
   },
   {
@@ -245,10 +245,10 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Which best describes the primary symptom or cause?',
     options: [
-      { label: 'Pain when lifting arm or reaching overhead', nextNodeId: 'sh-overhead' },
-      { label: 'Pain after trauma or feeling of popping/instability', nextNodeId: 'sh-trauma' },
-      { label: 'Severe stiffness and limited movement', nextNodeId: 'sh-stiff' },
-      { label: 'Front of shoulder / bicep pain', nextNodeId: 'sh-front' },
+      { label: 'Pain when lifting arm or reaching overhead', nextNodeId: 'sh-overhead', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
+      { label: 'Pain after trauma or feeling of popping/instability', nextNodeId: 'sh-trauma', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
+      { label: 'Severe stiffness and limited movement', nextNodeId: 'sh-stiff', highlightMuscles: ['front-deltoids'], pin: { top: 25, left: 25, zoom: 3.5 } },
+      { label: 'Front of shoulder / bicep pain', nextNodeId: 'sh-front', highlightMuscles: ['biceps'], pin: { top: 28, left: 25, zoom: 3.5 } },
     ]
   },
   {
@@ -302,9 +302,9 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is your pain primarily located?',
     options: [
-      { label: 'Elbow', nextNodeId: 'ewh-elbow' },
-      { label: 'Wrist', nextNodeId: 'ewh-wrist' },
-      { label: 'Hand or Fingers', nextNodeId: 'ewh-hand' },
+      { label: 'Elbow', nextNodeId: 'ewh-elbow', highlightMuscles: ['forearm', 'biceps'], pin: { top: 35, left: 20, zoom: 3.5 } },
+      { label: 'Wrist', nextNodeId: 'ewh-wrist', highlightMuscles: ['forearm'], pin: { top: 42, left: 15, zoom: 4.0 } },
+      { label: 'Hand or Fingers', nextNodeId: 'ewh-hand', highlightMuscles: ['forearm'], pin: { top: 48, left: 10, zoom: 4.5 } },
     ]
   },
   {
@@ -353,8 +353,8 @@ export const regionalRoots: DiagnosticNode[] = [
     category: 'location',
     content: 'Where is the primary symptom or cause?',
     options: [
-      { label: 'Headache, dizziness, or head impact', nextNodeId: 'hn-head' },
-      { label: 'Neck pain', nextNodeId: 'hn-neck' },
+      { label: 'Headache, dizziness, or head impact', nextNodeId: 'hn-head', highlightMuscles: ['neck'], pin: { top: 10, left: 50, zoom: 3.5 } },
+      { label: 'Neck pain', nextNodeId: 'hn-neck', highlightMuscles: ['neck'], pin: { top: 15, left: 50, zoom: 3.5 } },
     ]
   },
   {

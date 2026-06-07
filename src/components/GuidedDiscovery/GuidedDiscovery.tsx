@@ -132,6 +132,7 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                         style={{
                           left: '50%',
                           top: '50%',
+                          transformOrigin: option.pin ? `${option.pin.left}% ${option.pin.top}%` : '50% 50%',
                           transform: `translate(-${option.pin ? option.pin.left : 50}%, -${option.pin ? option.pin.top : 50}%) scale(${option.pin?.zoom || (option.pin ? 3.5 : 0.75)})`,
                           width: '40px',
                           height: '80px',

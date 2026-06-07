@@ -5,6 +5,7 @@
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Model from 'react-body-highlighter';
+import type { Muscle } from 'react-body-highlighter';
 import type { BodyRegion, DiagnosticNode, DiagnosticAnswer } from '../../data/knowledgebase/types';
 import { getDiagnosticNode } from '../../data/knowledgebase';
 import { getStartNode, recordAnswer, resolveResult } from '../../engine/diagnostic-matcher';
@@ -127,7 +128,7 @@ export function GuidedDiscovery({ region, onComplete, onBack }: GuidedDiscoveryP
                       <div className="guided-discovery__option-diagram">
                         <Model
                           type={option.modelType || 'anterior'}
-                          data={[{ name: 'Highlight', muscles: option.highlightMuscles }]}
+                          data={[{ name: 'Highlight', muscles: option.highlightMuscles as Muscle[] }]}
                           bodyColor="var(--color-bg-secondary)"
                           highlightedColors={['var(--color-accent)']}
                           style={{ width: '40px', height: '80px' }}
